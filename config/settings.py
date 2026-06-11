@@ -14,7 +14,7 @@ SECRET_KEY = "change-this-secret-key"
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # ==================================================
 # CUSTOM USER MODEL
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -145,6 +146,10 @@ STATICFILES_DIRS = [
 
 STATIC_ROOT = BASE_DIR / "staticfiles"
 
+STATICFILES_STORAGE = (
+    "whitenoise.storage.CompressedManifestStaticFilesStorage"
+)
+
 # ==================================================
 # MEDIA FILES
 # ==================================================
@@ -164,7 +169,9 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # ==================================================
 
 LOGIN_URL = "login"
+
 LOGIN_REDIRECT_URL = "home"
+
 LOGOUT_REDIRECT_URL = "home"
 
 # ==================================================
@@ -178,5 +185,7 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 # ==================================================
 
 CSRF_COOKIE_SECURE = False
+
 SESSION_COOKIE_SECURE = False
+
 X_FRAME_OPTIONS = "SAMEORIGIN"
