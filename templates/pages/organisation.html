@@ -1,0 +1,219 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- BANNIÈRE DE PAGE -->
+
+<section class="page-banner">
+
+    <div class="container text-center">
+
+        <h1>
+            Organisation du Parti
+        </h1>
+
+        <p>
+            Une organisation structurée au service
+            des territoires et des citoyens.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- CONTENU PRINCIPAL -->
+
+<section class="content-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-4 text-center">
+
+                <img
+                    src="{% static 'images/logo.png' %}"
+                    class="img-fluid organisation-logo"
+                    width="250"
+                    alt="Logo AND NAWLE"
+                >
+
+            </div>
+
+            <div class="col-lg-8">
+
+                <span class="section-badge">
+                    STRUCTURE NATIONALE
+                </span>
+
+                <h2 class="mt-3">
+                    Bureau National
+                </h2>
+
+                <p>
+                    Le parti est organisé autour d'un Bureau National
+                    chargé de définir les orientations stratégiques,
+                    coordonner les actions politiques et assurer
+                    le rayonnement du mouvement sur l'ensemble
+                    du territoire national.
+                </p>
+
+                <p>
+                    Cette organisation repose également sur des
+                    coordinations régionales, départementales
+                    et communales afin de garantir une présence
+                    permanente auprès des populations et une
+                    participation citoyenne active.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ORGANIGRAMME -->
+
+<section class="content-section bg-light">
+
+    <div class="container">
+
+        <div class="section-header text-center">
+
+            <span class="section-badge">
+                ORGANISATION
+            </span>
+
+            <h2>
+                Structure du Mouvement
+            </h2>
+
+        </div>
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-lg-3">
+
+                <div class="vision-card text-center">
+
+                    <div class="vision-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+
+                    <h4>
+                        Bureau National
+                    </h4>
+
+                    <p>
+                        Direction stratégique
+                        du mouvement.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <div class="vision-card text-center">
+
+                    <div class="vision-icon">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+
+                    <h4>
+                        Coordinations Régionales
+                    </h4>
+
+                    <p>
+                        Présence dans les
+                        14 régions du Sénégal.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <div class="vision-card text-center">
+
+                    <div class="vision-icon">
+                        <i class="bi bi-diagram-3"></i>
+                    </div>
+
+                    <h4>
+                        Coordinations Départementales
+                    </h4>
+
+                    <p>
+                        Relais des actions
+                        sur le terrain.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3">
+
+                <div class="vision-card text-center">
+
+                    <div class="vision-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+
+                    <h4>
+                        Sections Communales
+                    </h4>
+
+                    <p>
+                        Mobilisation citoyenne
+                        de proximité.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- APPEL À L'ENGAGEMENT -->
+
+<section class="content-section">
+
+    <div class="container text-center">
+
+        <div class="section-header">
+
+            <span class="section-badge">
+                ENGAGEMENT
+            </span>
+
+            <h2>
+                Rejoignez l'organisation
+            </h2>
+
+            <p>
+                Participez à la construction d'un Sénégal
+                plus fort, plus juste et plus prospère.
+            </p>
+
+            <a href="#" class="hero-btn-primary mt-3">
+                Adhérer Maintenant
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

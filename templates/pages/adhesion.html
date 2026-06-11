@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="page-banner">
+
+    <div class="container">
+
+        <h1>
+            Rejoindre AND NAWLE
+        </h1>
+
+        <p>
+            Ensemble pour le développement des territoires.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="content-section">
+
+    <div class="container">
+
+        <form class="p-4 shadow rounded bg-white">
+
+            <div class="mb-3">
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Nom complet"
+                >
+            </div>
+
+            <div class="mb-3">
+                <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email"
+                >
+            </div>
+
+            <div class="mb-3">
+                <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Téléphone"
+                >
+            </div>
+
+            <button
+                type="submit"
+                class="btn btn-primary"
+            >
+                Envoyer ma demande
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

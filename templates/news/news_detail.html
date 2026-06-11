@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="news-detail">
+
+    <div class="container">
+
+        <img
+            src="{{ article.image.url }}"
+            class="img-fluid rounded"
+            alt="{{ article.title }}"
+        >
+
+        <h1 class="mt-4">
+
+            {{ article.title }}
+
+        </h1>
+
+        <hr>
+
+        <div>
+
+            {{ article.content|linebreaks }}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

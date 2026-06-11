@@ -1,0 +1,99 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+
+    <div class="container">
+
+        <a class="navbar-brand d-flex align-items-center"
+           href="{% url 'home' %}">
+
+            <img
+                src="{% static 'images/logo.png' %}"
+                alt="AND NAWLE"
+                class="logo-navbar"
+            >
+
+            <div class="ms-3">
+
+                <div class="logo-title">
+                    AND NAWLE
+                </div>
+
+                <div class="logo-subtitle">
+                    LA MARCHE DES TERRITOIRES
+                </div>
+
+            </div>
+
+        </a>
+
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbar"
+            aria-controls="navbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+            class="collapse navbar-collapse"
+            id="navbar"
+        >
+
+            <ul class="navbar-nav ms-auto align-items-center">
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="{% url 'vision' %}">
+                        Vision
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="{% url 'programme' %}">
+                        Programme
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="{% url 'organisation' %}">
+                        Organisation
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="{% url 'news_list' %}">
+                        Actualités
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link"
+                       href="{% url 'contact' %}">
+                        Contact
+                    </a>
+                </li>
+
+                <li class="nav-item ms-lg-3 mt-3 mt-lg-0">
+                    <a
+                        class="btn btn-light btn-join"
+                        href="{% url 'adhesion' %}"
+                    >
+                        Nous rejoindre
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>

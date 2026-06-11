@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="page-header">
+
+    <div class="container">
+
+        <h1>
+            Actualités
+        </h1>
+
+        <p>
+            Suivez les activités du mouvement.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="news-section">
+
+    <div class="container">
+
+        <div class="row">
+
+            {% for article in news_list %}
+
+            <div class="col-lg-4 mb-4">
+
+                <div class="news-card">
+
+                    <img
+                        src="{{ article.image.url }}"
+                        class="img-fluid"
+                        alt="{{ article.title }}"
+                    >
+
+                    <div class="p-4">
+
+                        <h4>
+                            {{ article.title }}
+                        </h4>
+
+                        <a
+                            href="{% url 'news_detail' article.id %}"
+                            class="btn btn-primary"
+                        >
+                            Lire plus
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
