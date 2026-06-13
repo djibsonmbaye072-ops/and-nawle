@@ -1,33 +1,401 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
-<section class="news-detail">
+<section class="presidential-news-detail">
+
+    <!-- HERO MEDIA -->
+
+    <div class="news-hero">
+
+        {% if article.cover_image %}
+
+        <img
+            src="{{ article.cover_image.url }}"
+            alt="{{ article.title }}"
+            class="hero-image"
+        >
+
+        {% else %}
+
+        <div class="hero-placeholder"></div>
+
+        {% endif %}
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content container">
+
+            <span class="hero-badge">
+
+                COMMUNIQUÉ OFFICIEL
+
+            </span>
+
+            <h1 class="hero-title">
+
+                {{ article.title }}
+
+            </h1>
+
+            <div class="hero-meta">
+
+                <span>
+                    <i class="bi bi-calendar-event"></i>
+                    {{ article.published_at|date:"d F Y" }}
+                </span>
+
+                <span>
+                    <i class="bi bi-clock"></i>
+                    {{ article.published_at|date:"H:i" }}
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CONTENU -->
 
     <div class="container">
 
-        <img
-            src="{{ article.image.url }}"
-            class="img-fluid rounded"
-            alt="{{ article.title }}"
-        >
+        <div class="content-wrapper">
 
-        <h1 class="mt-4">
+            <div class="article-card">
 
-            {{ article.title }}
+                <!-- IMAGE PRINCIPALE -->
 
-        </h1>
+                {% if article.cover_image %}
 
-        <hr>
+                <div class="featured-image-wrapper">
 
-        <div>
+                    <img
+                        src="{{ article.cover_image.url }}"
+                        alt="{{ article.title }}"
+                        class="featured-image"
+                    >
 
-            {{ article.content|linebreaks }}
+                </div>
+
+                {% endif %}
+
+                <!-- VIDEO -->
+
+                {% if article.video %}
+
+                <div class="video-wrapper">
+
+                    <video
+                        controls
+                        preload="metadata"
+                        class="article-video"
+                    >
+                        <source src="{{ article.video.url }}">
+                    </video>
+
+                </div>
+
+                {% endif %}
+
+                <!-- TEXTE -->
+
+                <div class="article-body">
+
+                    {{ article.content|linebreaks }}
+
+                </div>
+
+                <!-- DOCUMENT -->
+
+                {% if article.document %}
+
+                <div class="document-section">
+
+                    <div class="document-card">
+
+                        <div class="document-icon">
+
+                            <i class="bi bi-file-earmark-pdf-fill"></i>
+
+                        </div>
+
+                        <div class="document-info">
+
+                            <h5>
+                                Document Officiel
+                            </h5>
+
+                            <p>
+                                Télécharger le document associé à cette publication.
+                            </p>
+
+                        </div>
+
+                        <a
+                            href="{{ article.document.url }}"
+                            target="_blank"
+                            class="download-btn"
+                        >
+                            Télécharger
+                        </a>
+
+                    </div>
+
+                </div>
+
+                {% endif %}
+
+            </div>
 
         </div>
 
     </div>
 
 </section>
+
+<style>
+
+/* ==========================
+   PRESIDENTIAL NEWS DETAIL
+========================== */
+
+.presidential-news-detail{
+    background:#f7f9fc;
+    min-height:100vh;
+}
+
+/* HERO */
+
+.news-hero{
+    position:relative;
+    height:75vh;
+    min-height:600px;
+    overflow:hidden;
+}
+
+.hero-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.hero-placeholder{
+    width:100%;
+    height:100%;
+    background:linear-gradient(
+        135deg,
+        #0b1e3a,
+        #173f78
+    );
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(
+        rgba(0,0,0,.15),
+        rgba(0,0,0,.75)
+    );
+}
+
+.hero-content{
+    position:absolute;
+    bottom:80px;
+    left:50%;
+    transform:translateX(-50%);
+    color:white;
+    z-index:10;
+}
+
+.hero-badge{
+    display:inline-block;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.2);
+    color:white;
+    padding:10px 22px;
+    border-radius:50px;
+    margin-bottom:25px;
+    font-weight:700;
+    letter-spacing:1px;
+}
+
+.hero-title{
+    font-size:3.2rem;
+    font-weight:800;
+    line-height:1.2;
+    max-width:1000px;
+    margin-bottom:25px;
+    text-shadow:0 5px 20px rgba(0,0,0,.4);
+}
+
+.hero-meta{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+    font-size:1rem;
+}
+
+.hero-meta span{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    opacity:.95;
+}
+
+/* CONTENT */
+
+.content-wrapper{
+    margin-top:-100px;
+    position:relative;
+    z-index:20;
+    padding-bottom:100px;
+}
+
+.article-card{
+    background:white;
+    border-radius:30px;
+    overflow:hidden;
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.08);
+}
+
+/* IMAGE */
+
+.featured-image-wrapper{
+    padding:30px;
+}
+
+.featured-image{
+    width:100%;
+    border-radius:25px;
+    display:block;
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.15);
+}
+
+/* VIDEO */
+
+.video-wrapper{
+    padding:0 30px 30px;
+}
+
+.article-video{
+    width:100%;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:
+    0 20px 50px rgba(0,0,0,.15);
+}
+
+/* ARTICLE */
+
+.article-body{
+    padding:20px 60px 60px;
+    font-size:1.15rem;
+    line-height:2;
+    color:#2d3748;
+}
+
+.article-body p{
+    margin-bottom:25px;
+}
+
+/* DOCUMENT */
+
+.document-section{
+    padding:0 40px 50px;
+}
+
+.document-card{
+    background:linear-gradient(
+        135deg,
+        #0b1e3a,
+        #173f78
+    );
+    color:white;
+    border-radius:25px;
+    padding:35px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:25px;
+    flex-wrap:wrap;
+}
+
+.document-icon{
+    font-size:3rem;
+}
+
+.document-info h5{
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.document-info p{
+    margin:0;
+    opacity:.9;
+}
+
+.download-btn{
+    background:white;
+    color:#0b1e3a;
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:50px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.download-btn:hover{
+    transform:translateY(-3px);
+    color:#0b1e3a;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:991px){
+
+    .hero-title{
+        font-size:2.3rem;
+    }
+
+    .article-body{
+        padding:30px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .news-hero{
+        height:65vh;
+        min-height:500px;
+    }
+
+    .hero-title{
+        font-size:1.9rem;
+    }
+
+    .hero-content{
+        bottom:50px;
+    }
+
+    .article-body{
+        font-size:1rem;
+        line-height:1.9;
+    }
+
+    .document-card{
+        text-align:center;
+        justify-content:center;
+    }
+
+}
+
+</style>
 
 {% endblock %}

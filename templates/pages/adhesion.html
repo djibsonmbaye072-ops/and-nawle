@@ -1,64 +1,487 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
-<section class="page-banner">
+<!-- HERO PRESIDENTIEL -->
 
-    <div class="container">
+<section class="join-hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container position-relative text-center">
+
+        <span class="hero-badge">
+            MOUVEMENT CITOYEN
+        </span>
 
         <h1>
-            Rejoindre AND NAWLE
+            Rejoignez AND NAWLE
         </h1>
 
         <p>
-            Ensemble pour le développement des territoires.
+            Engagez-vous pour bâtir un Sénégal plus juste, plus fort et plus prospère.
+            Votre voix, votre énergie et votre engagement peuvent changer l'avenir.
         </p>
 
     </div>
 
 </section>
 
-<section class="content-section">
+<!-- VALEURS -->
+
+<section class="values-section">
 
     <div class="container">
 
-        <form class="p-4 shadow rounded bg-white">
+        <div class="section-title text-center">
 
-            <div class="mb-3">
-                <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Nom complet"
-                >
+            <span>Pourquoi nous rejoindre</span>
+
+            <h2>
+                Une vision ambitieuse pour nos territoires
+            </h2>
+
+        </div>
+
+        <div class="row g-4 mt-4">
+
+            <div class="col-lg-4">
+
+                <div class="value-card">
+
+                    <div class="icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+
+                    <h4>Engagement Citoyen</h4>
+
+                    <p>
+                        Participer activement au développement local et national.
+                    </p>
+
+                </div>
+
             </div>
 
-            <div class="mb-3">
-                <input
-                    type="email"
-                    class="form-control"
-                    placeholder="Email"
-                >
+            <div class="col-lg-4">
+
+                <div class="value-card">
+
+                    <div class="icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+
+                    <h4>Innovation</h4>
+
+                    <p>
+                        Encourager des solutions modernes au service des populations.
+                    </p>
+
+                </div>
+
             </div>
 
-            <div class="mb-3">
-                <input
-                    type="text"
-                    class="form-control"
-                    placeholder="Téléphone"
-                >
+            <div class="col-lg-4">
+
+                <div class="value-card">
+
+                    <div class="icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+
+                    <h4>Solidarité</h4>
+
+                    <p>
+                        Construire une nation forte basée sur l'entraide et la justice.
+                    </p>
+
+                </div>
+
             </div>
 
-            <button
-                type="submit"
-                class="btn btn-primary"
-            >
-                Envoyer ma demande
-            </button>
-
-        </form>
+        </div>
 
     </div>
 
 </section>
+
+<!-- CHIFFRES -->
+
+<section class="stats-section">
+
+    <div class="container">
+
+        <div class="row text-center">
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <h2>14</h2>
+
+                    <p>Régions concernées</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <h2>46</h2>
+
+                    <p>Départements</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <h2>557</h2>
+
+                    <p>Communes</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <h2>∞</h2>
+
+                    <p>Opportunités d'agir</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FORMULAIRE -->
+
+<section class="join-form-section">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="join-card">
+
+                    <div class="text-center mb-5">
+
+                        <span class="form-badge">
+                            ADHÉSION
+                        </span>
+
+                        <h2>
+                            Devenez membre du mouvement
+                        </h2>
+
+                        <p>
+                            Remplissez le formulaire ci-dessous pour rejoindre
+                            officiellement AND NAWLE.
+                        </p>
+
+                    </div>
+
+                    <form>
+
+                        <div class="row">
+
+                            <div class="col-md-6 mb-4">
+
+                                <label>Nom complet</label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="Votre nom complet"
+                                    required
+                                >
+
+                            </div>
+
+                            <div class="col-md-6 mb-4">
+
+                                <label>Téléphone</label>
+
+                                <input
+                                    type="text"
+                                    class="form-control"
+                                    placeholder="+221 XX XXX XX XX"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+                        <div class="mb-4">
+
+                            <label>Email</label>
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                placeholder="Votre adresse email"
+                            >
+
+                        </div>
+
+                        <div class="mb-4">
+
+                            <label>Profession</label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Votre profession"
+                            >
+
+                        </div>
+
+                        <div class="mb-4">
+
+                            <label>Localité</label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Ville / Commune"
+                            >
+
+                        </div>
+
+                        <div class="mb-4">
+
+                            <label>Message</label>
+
+                            <textarea
+                                rows="5"
+                                class="form-control"
+                                placeholder="Pourquoi souhaitez-vous rejoindre AND NAWLE ?"
+                            ></textarea>
+
+                        </div>
+
+                        <div class="text-center">
+
+                            <button
+                                type="submit"
+                                class="join-btn"
+                            >
+                                <i class="fas fa-paper-plane me-2"></i>
+                                Envoyer ma demande d'adhésion
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+
+/* HERO */
+
+.join-hero{
+    position:relative;
+    padding:150px 0;
+    overflow:hidden;
+    background:
+    linear-gradient(
+    135deg,
+    #0f172a,
+    #1e293b,
+    #0f766e
+    );
+    color:white;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(circle at top right,
+    rgba(255,255,255,.15),
+    transparent 40%);
+}
+
+.hero-badge{
+    display:inline-block;
+    padding:10px 22px;
+    border-radius:50px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(10px);
+    font-size:.85rem;
+    letter-spacing:2px;
+    margin-bottom:25px;
+}
+
+.join-hero h1{
+    font-size:4rem;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.join-hero p{
+    max-width:800px;
+    margin:auto;
+    font-size:1.2rem;
+    opacity:.9;
+}
+
+/* SECTION */
+
+.section-title span{
+    color:#0f766e;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.section-title h2{
+    font-size:2.5rem;
+    font-weight:800;
+    margin-top:10px;
+}
+
+.values-section{
+    padding:100px 0;
+}
+
+.value-card{
+    background:white;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.4s;
+    height:100%;
+}
+
+.value-card:hover{
+    transform:translateY(-10px);
+}
+
+.value-card .icon{
+    width:80px;
+    height:80px;
+    margin:auto auto 20px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:28px;
+    color:white;
+    background:#0f766e;
+}
+
+/* STATS */
+
+.stats-section{
+    padding:80px 0;
+    background:#f8fafc;
+}
+
+.stat-card h2{
+    font-size:3rem;
+    font-weight:800;
+    color:#0f766e;
+}
+
+.stat-card p{
+    color:#64748b;
+}
+
+/* FORMULAIRE */
+
+.join-form-section{
+    padding:100px 0;
+    background:white;
+}
+
+.join-card{
+    background:white;
+    border-radius:30px;
+    padding:50px;
+    box-shadow:0 25px 60px rgba(0,0,0,.08);
+}
+
+.form-badge{
+    color:#0f766e;
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+.join-card h2{
+    font-size:2.5rem;
+    font-weight:800;
+}
+
+.form-control{
+    border-radius:15px;
+    padding:14px 18px;
+    border:1px solid #dbe4ee;
+}
+
+.form-control:focus{
+    box-shadow:none;
+    border-color:#0f766e;
+}
+
+.join-btn{
+    background:#0f766e;
+    color:white;
+    border:none;
+    padding:16px 40px;
+    border-radius:50px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.join-btn:hover{
+    transform:translateY(-3px);
+    background:#115e59;
+}
+
+@media(max-width:768px){
+
+    .join-hero h1{
+        font-size:2.5rem;
+    }
+
+    .join-card{
+        padding:30px;
+    }
+
+    .section-title h2{
+        font-size:2rem;
+    }
+
+}
+
+</style>
 
 {% endblock %}

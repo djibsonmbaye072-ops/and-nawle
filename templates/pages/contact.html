@@ -1,67 +1,300 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
-<section class="page-banner">
+<!-- HERO PRESIDENTIEL PREMIUM -->
 
-    <div class="container">
+<section class="contact-hero">
 
-        <h1>
-            Contact
+    <div class="hero-overlay"></div>
+
+    <div class="floating-light light-1"></div>
+    <div class="floating-light light-2"></div>
+
+    <div class="container hero-content">
+
+        <span class="hero-badge">
+            🇸🇳 RÉPUBLIQUE • ENGAGEMENT • LEADERSHIP
+        </span>
+
+        <h1 class="hero-title">
+            Contact Officiel du Mouvement
         </h1>
+
+        <p class="hero-subtitle">
+
+            Notre équipe reste disponible pour écouter les citoyens,
+            partenaires, militants, médias et institutions souhaitant
+            contribuer au développement d'un Sénégal souverain,
+            prospère et tourné vers l'avenir.
+
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="#contact-form" class="btn-president">
+                Envoyer un message
+            </a>
+
+            <a href="#siege" class="btn-outline-president">
+                Localiser le siège
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
-<section class="content-section">
+<!-- STATISTIQUES -->
+
+<section class="presidential-stats">
 
     <div class="container">
 
-        <div class="row">
+        <div class="row g-4 text-center">
 
-            <div class="col-lg-6">
+            <div class="col-md-3">
 
-                <h3>
-                    Nous contacter
-                </h3>
+                <div class="stat-card">
 
-                <p>
-                    Téléphone :
-                    +221 XX XXX XX XX
-                </p>
+                    <h2>14</h2>
+                    <p>Régions couvertes</p>
 
-                <p>
-                    Email :
-                    contact@andnawle.sn
-                </p>
+                </div>
 
             </div>
 
-            <div class="col-lg-6">
+            <div class="col-md-3">
 
-                <form>
+                <div class="stat-card">
+
+                    <h2>45+</h2>
+                    <p>Coordinations locales</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <h2>24/7</h2>
+                    <p>Disponibilité</p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <h2>100%</h2>
+                    <p>Engagement citoyen</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<div class="president-note">
+
+    <span class="gold-line"></span>
+
+    <h4>
+        Cabinet National
+    </h4>
+
+    <p>
+
+        Notre secrétariat général reçoit les demandes de partenariat,
+        les propositions citoyennes, les sollicitations médiatiques
+        et les correspondances institutionnelles.
+
+    </p>
+
+</div>
+
+<!-- CONTACT -->
+
+<section class="contact-section">
+
+<div class="container">
+
+    <div class="row g-5">
+
+        <!-- INFOS -->
+
+        <div class="col-lg-5">
+
+            <div class="contact-card">
+
+                <div class="president-note">
+
+                    <span class="gold-line"></span>
+
+                    <h4>
+                        Cabinet National
+                    </h4>
+
+                    <p>
+
+                        Notre secrétariat général reçoit les demandes
+                        de partenariat, les propositions citoyennes,
+                        les sollicitations médiatiques et les
+                        correspondances institutionnelles.
+
+                    </p>
+
+                </div>
+
+                <h2 class="section-title">
+                    Nos Coordonnées
+                </h2>
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+
+                    <div class="contact-info">
+
+                        <h5>Téléphone</h5>
+
+                        <p>
+                            +221 XX XXX XX XX
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope-open-text"></i>
+                    </div>
+
+                    <div class="contact-info">
+
+                        <h5>Email Officiel</h5>
+
+                        <p>
+                            contact@andnawle.sn
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-building-columns"></i>
+                    </div>
+
+                    <div class="contact-info">
+
+                        <h5>Siège National</h5>
+
+                        <p>
+                            Dakar, Sénégal
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        <i class="fas fa-landmark"></i>
+                    </div>
+
+                    <div class="contact-info">
+
+                        <h5>Horaires Officiels</h5>
+
+                        <p>
+                            Lundi - Vendredi<br>
+                            08h00 - 18h00
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- FORMULAIRE -->
+
+        <div class="col-lg-7">
+
+            <div
+                class="contact-form"
+                id="contact-form"
+            >
+
+                <h2 class="section-title">
+                    Envoyer un Message
+                </h2>
+
+                <p class="mb-4 text-muted">
+
+                    Utilisez ce formulaire pour contacter directement
+                    le mouvement. Notre équipe vous répondra dans les
+                    meilleurs délais.
+
+                </p>
+
+                <form method="POST">
+
+                    {% csrf_token %}
 
                     <input
+                        type="text"
                         class="form-control mb-3"
-                        placeholder="Nom"
+                        placeholder="Nom complet"
+                        required
                     >
 
                     <input
+                        type="email"
                         class="form-control mb-3"
-                        placeholder="Email"
+                        placeholder="Adresse email"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        class="form-control mb-3"
+                        placeholder="Objet du message"
+                        required
                     >
 
                     <textarea
-                        class="form-control"
-                        rows="5"
-                        placeholder="Message"
+                        class="form-control mb-4"
+                        placeholder="Votre message..."
+                        required
                     ></textarea>
 
                     <button
-                        class="btn btn-primary mt-3"
+                        type="submit"
+                        class="btn-president"
                     >
-                        Envoyer
+                        <i class="fas fa-paper-plane me-2"></i>
+                        Envoyer le message
                     </button>
 
                 </form>
@@ -71,6 +304,31 @@
         </div>
 
     </div>
+
+</div>
+
+</section>
+
+<!-- CARTE -->
+
+<section
+    class="map-section"
+    id="siege"
+>
+
+<div class="container">
+
+    <div class="map-card">
+
+        <iframe
+            src="https://maps.google.com/maps?q=Dakar&t=&z=13&ie=UTF8&iwloc=&output=embed"
+            loading="lazy"
+            allowfullscreen
+        ></iframe>
+
+    </div>
+
+</div>
 
 </section>
 

@@ -1,53 +1,77 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/vision.css' %}">
+{% endblock %}
+
 {% block content %}
 
-<!-- HERO PRESIDENTIEL -->
+<!-- HERO PRESIDENTIEL PREMIUM -->
 
 <section class="vision-hero">
 
-    <div class="vision-overlay"></div>
+<div class="hero-particles"></div>
 
-    <div class="container position-relative">
+<div class="vision-overlay"></div>
 
-        <div class="row align-items-center">
+<div class="container position-relative">
 
-            <div class="col-lg-7">
+    <div class="row align-items-center min-vh-100">
 
-                <span class="vision-badge">
-                    🇸🇳 VISION NATIONALE 2050
-                </span>
+        <div class="col-lg-7">
 
-                <h1 class="vision-title">
-                    Une Vision Nationale pour
-                    un Sénégal Souverain,
-                    Prospère et Solidaire
-                </h1>
+            <span class="vision-badge">
+                🇸🇳 AND NAWLE • VISION NATIONALE 2050
+            </span>
 
-                <p class="vision-subtitle">
-                    Notre ambition est de bâtir une République forte,
-                    fondée sur la justice, la performance économique,
-                    la solidarité nationale et la valorisation du potentiel humain.
-                </p>
+            <h1 class="vision-title">
+                Bâtir un Sénégal<br>
+                Souverain, Innovant,<br>
+                Prospère et Respecté
+            </h1>
 
-                <blockquote class="president-quote">
-                    « Notre devoir est de préparer aujourd'hui
-                    le Sénégal que nos enfants méritent demain :
-                    une nation unie, moderne, ambitieuse et respectée. »
-                </blockquote>
+            <p class="vision-subtitle">
+                Une vision ambitieuse portée par le leadership,
+                l'excellence, la justice sociale et la transformation
+                durable de notre nation pour les générations présentes
+                et futures.
+            </p>
 
-                <div class="president-signature">
-                    Président du Mouvement AND NAWLE
-                </div>
+            <blockquote class="president-quote">
+                « Le destin du Sénégal ne doit être limité ni par
+                nos difficultés présentes ni par nos peurs.
+                Il doit être guidé par notre courage,
+                notre travail et notre ambition collective. »
+            </blockquote>
+
+            <div class="hero-buttons mt-5">
+
+                <a href="{% url 'adhesion' %}"
+                   class="btn btn-gold btn-lg">
+
+                    Rejoindre le Mouvement
+
+                </a>
+
+                <a href="#vision2050"
+                   class="btn btn-outline-light btn-lg">
+
+                    Découvrir la Vision
+
+                </a>
 
             </div>
 
-            <div class="col-lg-5 text-center">
+        </div>
+
+        <div class="col-lg-5 text-center">
+
+            <div class="president-frame">
 
                 <img
                     src="{% static 'images/president2.jpg' %}"
-                    alt="Président du Mouvement"
+                    alt="Président du Mouvement AND NAWLE"
                     class="president-photo"
                 >
 
@@ -56,6 +80,8 @@
         </div>
 
     </div>
+
+</div>
 
 </section>
 
@@ -99,6 +125,63 @@
                 moderne capable de transformer son potentiel
                 en prospérité durable.
             </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FEUILLE DE ROUTE -->
+
+<section class="roadmap-section" id="vision2050">
+
+    <div class="container">
+
+        <div class="section-header text-center">
+
+            <span>FEUILLE DE ROUTE</span>
+
+            <h2>Le Sénégal de Demain se Construit Aujourd'hui</h2>
+
+        </div>
+
+        <div class="roadmap">
+
+            <div class="roadmap-item">
+                <span>2025</span>
+                <h4>Réformes Structurelles</h4>
+                <p>
+                    Modernisation des institutions et
+                    renforcement de la gouvernance.
+                </p>
+            </div>
+
+            <div class="roadmap-item">
+                <span>2030</span>
+                <h4>Transformation Économique</h4>
+                <p>
+                    Industrialisation et création massive
+                    d'emplois.
+                </p>
+            </div>
+
+            <div class="roadmap-item">
+                <span>2040</span>
+                <h4>Leadership Africain</h4>
+                <p>
+                    Positionner le Sénégal comme référence
+                    continentale.
+                </p>
+            </div>
+
+            <div class="roadmap-item">
+                <span>2050</span>
+                <h4>Émergence Totale</h4>
+                <p>
+                    Une nation moderne, souveraine et prospère.
+                </p>
+            </div>
 
         </div>
 
@@ -253,6 +336,85 @@
                 Nous voulons un Sénégal souverain,
                 stable, ambitieux et respecté.
             </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PRIORITES NATIONALES -->
+
+<section class="national-priorities">
+
+    <div class="container">
+
+        <div class="section-header text-center">
+
+            <span>PRIORITÉS NATIONALES</span>
+
+            <h2>Nos Engagements Stratégiques</h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-4">
+
+                <div class="priority-card">
+
+                    <div class="priority-icon">
+                        🎓
+                    </div>
+
+                    <h3>Éducation</h3>
+
+                    <p>
+                        Former une jeunesse compétitive
+                        pour les défis du XXIe siècle.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="priority-card">
+
+                    <div class="priority-icon">
+                        🏥
+                    </div>
+
+                    <h3>Santé</h3>
+
+                    <p>
+                        Garantir un accès équitable
+                        aux soins de qualité.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <div class="priority-card">
+
+                    <div class="priority-icon">
+                        💼
+                    </div>
+
+                    <h3>Emploi</h3>
+
+                    <p>
+                        Créer des opportunités durables
+                        pour chaque citoyen.
+                    </p>
+
+                </div>
+
+            </div>
 
         </div>
 

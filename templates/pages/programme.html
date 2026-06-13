@@ -1,20 +1,144 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/programme.css' %}">
+{% endblock %}
 
 {% block content %}
 
-<section class="page-banner">
+<!-- HERO PRESIDENTIEL PREMIUM -->
 
-    <div class="container">
+<section class="program-hero">
 
-        <h1>
-            Notre Programme
+    <div class="container text-center">
+
+        <span class="program-badge">
+            PROGRAMME NATIONAL
+        </span>
+
+        <h1 class="program-title">
+            Bâtir Une Nation Forte,<br>
+            Moderne et Prospère
         </h1>
+
+        <p class="program-subtitle">
+            Une feuille de route ambitieuse pour transformer durablement
+            notre pays grâce à une gouvernance exemplaire, une économie
+            compétitive, une jeunesse valorisée et des institutions fortes
+            au service de chaque citoyen.
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="#priorites" class="btn-president">
+                Découvrir le Programme
+            </a>
+
+            <a href="{% url 'contact' %}" class="btn-outline-president">
+                Rejoindre le Mouvement
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
-<section class="content-section">
+<!-- VISION -->
+
+<section class="vision-section">
+
+    <div class="container text-center">
+
+        <h2 class="section-title">
+            Notre Vision
+        </h2>
+
+        <div class="section-line"></div>
+
+        <p class="vision-text">
+            Nous croyons en un État fort, transparent et performant,
+            capable de répondre efficacement aux défis du XXIe siècle.
+            Notre engagement est de placer l'humain au cœur
+            de toutes les politiques publiques afin de garantir
+            le progrès social, la croissance économique et
+            la stabilité nationale.
+        </p>
+
+    </div>
+
+</section>
+
+<section class="priority-section" id="priorites">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Les Grandes Priorités Nationales
+            </h2>
+
+            <div class="section-line"></div>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="priority-card">
+                    <span>01</span>
+                    <h4>Souveraineté</h4>
+                    <p>
+                        Renforcer les institutions et garantir
+                        l'indépendance stratégique du pays.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="priority-card">
+                    <span>02</span>
+                    <h4>Transformation Économique</h4>
+                    <p>
+                        Accélérer l'industrialisation et soutenir
+                        l'investissement productif.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="priority-card">
+                    <span>03</span>
+                    <h4>Capital Humain</h4>
+                    <p>
+                        Éducation, santé et compétences au cœur
+                        du développement.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="priority-card">
+                    <span>04</span>
+                    <h4>Innovation</h4>
+                    <p>
+                        Faire du numérique et de la technologie
+                        un moteur de croissance.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PROGRAMMES -->
+
+<section class="program-section">
 
     <div class="container">
 
@@ -24,10 +148,17 @@
 
                 <div class="program-card">
 
-                    <h3>🏥 Santé</h3>
+                    <div class="program-icon">
+                        🏥
+                    </div>
+
+                    <h3>Santé</h3>
 
                     <p>
-                        Modernisation des structures de santé.
+                        Construction et modernisation des hôpitaux,
+                        renforcement du personnel médical,
+                        accès universel aux soins
+                        et amélioration des équipements sanitaires.
                     </p>
 
                 </div>
@@ -38,10 +169,16 @@
 
                 <div class="program-card">
 
-                    <h3>🎓 Éducation</h3>
+                    <div class="program-icon">
+                        🎓
+                    </div>
+
+                    <h3>Éducation</h3>
 
                     <p>
-                        Éducation de qualité pour tous.
+                        Écoles modernes, amélioration des programmes,
+                        formation professionnelle renforcée
+                        et égalité des chances pour tous.
                     </p>
 
                 </div>
@@ -52,10 +189,17 @@
 
                 <div class="program-card">
 
-                    <h3>💼 Emploi</h3>
+                    <div class="program-icon">
+                        💼
+                    </div>
+
+                    <h3>Emploi</h3>
 
                     <p>
-                        Création massive d'emplois.
+                        Soutien massif à l'entrepreneuriat,
+                        développement industriel,
+                        création d'emplois durables
+                        et insertion des jeunes.
                     </p>
 
                 </div>
@@ -66,15 +210,112 @@
 
                 <div class="program-card">
 
-                    <h3>💻 Numérique</h3>
+                    <div class="program-icon">
+                        💻
+                    </div>
+
+                    <h3>Numérique</h3>
 
                     <p>
-                        Digitalisation de l'administration.
+                        Administration digitalisée,
+                        cybersécurité renforcée,
+                        innovation technologique
+                        et transformation digitale nationale.
                     </p>
 
                 </div>
 
             </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- STATISTIQUES -->
+
+<section class="stats-section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3 col-6 mb-4">
+                <div class="stat-box">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">ENGAGEMENT</div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-6 mb-4">
+                <div class="stat-box">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">AU SERVICE DU PEUPLE</div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-6 mb-4">
+                <div class="stat-box">
+                    <div class="stat-number">2035</div>
+                    <div class="stat-label">VISION STRATÉGIQUE</div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-6 mb-4">
+                <div class="stat-box">
+                    <div class="stat-number">1</div>
+                    <div class="stat-label">NATION UNIE</div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="president-quote">
+
+    <div class="container">
+
+        <div class="quote-box">
+
+            <h3>
+                « Le développement durable d'une nation repose sur
+                l'unité, le travail, la justice et la confiance
+                entre l'État et les citoyens. »
+            </h3>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ENGAGEMENT -->
+
+<section class="commitment-section">
+
+    <div class="container">
+
+        <div class="commitment-box">
+
+            <h2>
+                Notre Engagement envers la Nation
+            </h2>
+
+            <p>
+                Nous nous engageons à gouverner avec intégrité,
+                responsabilité et transparence.
+                Chaque décision sera guidée par l'intérêt général,
+                le développement durable et le bien-être de tous
+                les citoyens.
+            </p>
+
+            <a href="{% url 'contact' %}" class="btn-president">
+                Rejoindre le Mouvement
+            </a>
 
         </div>
 

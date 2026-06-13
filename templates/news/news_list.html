@@ -30,17 +30,29 @@
 
                 <div class="news-card">
 
+                    {% if article.cover_image %}
                     <img
-                        src="{{ article.image.url }}"
-                        class="img-fluid"
+                        src="{{ article.cover_image.url }}"
+                        class="img-fluid news-image"
                         alt="{{ article.title }}"
                     >
+                    {% else %}
+                    <div class="news-placeholder">
+                        Image non disponible
+                    </div>
+                    {% endif %}
 
                     <div class="p-4">
 
                         <h4>
                             {{ article.title }}
                         </h4>
+
+                        {% if article.excerpt %}
+                        <p>
+                            {{ article.excerpt|truncatewords:20 }}
+                        </p>
+                        {% endif %}
 
                         <a
                             href="{% url 'news_detail' article.id %}"
@@ -52,6 +64,16 @@
                     </div>
 
                 </div>
+
+            </div>
+
+            {% empty %}
+
+            <div class="col-12 text-center">
+
+                <h3>
+                    Aucune actualité publiée pour le moment.
+                </h3>
 
             </div>
 

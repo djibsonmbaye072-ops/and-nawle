@@ -12,9 +12,20 @@
         content="width=device-width, initial-scale=1.0"
     >
 
-    <title>AND NAWLE</title>
+    <title>
+        {% block title %}
+        AND NAWLE
+        {% endblock %}
+    </title>
 
-    <!-- Bootstrap -->
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="{% static 'logo.png' %}"
+    >
+
+    <!-- Bootstrap CSS -->
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
         rel="stylesheet"
@@ -28,7 +39,7 @@
 
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet"
     >
 
@@ -38,23 +49,27 @@
         rel="stylesheet"
     >
 
-    <!-- Custom CSS -->
+    <!-- CSS GLOBAL -->
     <link
         rel="stylesheet"
         href="{% static 'css/style.css' %}"
     >
 
-    <!-- Favicon -->
+    <!-- CONTACT CSS -->
     <link
-        rel="icon"
-        href="{% static 'logo.png' %}"
+        rel="stylesheet"
+        href="{% static 'css/contact.css' %}"
     >
+
+    <!-- CSS SPÉCIFIQUES AUX PAGES -->
+    {% block extra_css %}
+    {% endblock %}
 
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- Navbar -->
     {% include 'includes/navbar.html' %}
 
     <!-- Contenu principal -->
@@ -65,19 +80,22 @@
 
     </main>
 
-    <!-- Footer principal -->
+    <!-- Footer -->
     {% include 'includes/footer.html' %}
 
-    <!-- Signature développeur premium -->
+    <!-- Signature Développeur -->
+
     <section class="developer-credit py-3 text-center">
 
         <div class="container">
 
             <small class="developer-signature">
 
-                <i class="bi bi-code-slash"></i>
+                <i class="bi bi-code-slash me-1"></i>
 
-                Architecture, développement et administration du système :
+                Architecture, Développement et Administration du Système
+
+                <span class="mx-2">|</span>
 
                 <strong>Djibril Mbaye</strong>
 
@@ -101,12 +119,19 @@
     <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
+    <!-- Initialisation AOS -->
     <script>
         AOS.init({
             duration: 1000,
-            once: true
+            once: true,
+            offset: 100,
+            easing: 'ease-in-out'
         });
     </script>
+
+    <!-- JavaScript spécifique à chaque page -->
+    {% block extra_js %}
+    {% endblock %}
 
 </body>
 

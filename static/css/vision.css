@@ -1,0 +1,823 @@
+/* ====================================
+   OPTIMISATIONS GLOBALES
+==================================== */
+
+*{
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+.pillar-card,
+.priority-card,
+.roadmap-item,
+.stat-box,
+.president-frame{
+    will-change:transform;
+}
+
+/* ====================================
+   HERO PRESIDENTIEL SUPRÊME
+==================================== */
+
+.vision-hero{
+    position:relative;
+    min-height:100vh;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+    background:
+    linear-gradient(
+    135deg,
+    rgba(0,32,96,.95),
+    rgba(0,16,48,.94)
+    ),
+    url("/static/images/nation-vision.jpg") center center/cover no-repeat;
+}
+
+/* EFFET LUMIERE */
+
+.vision-overlay{
+    position:absolute;
+    inset:0;
+    background:
+    radial-gradient(
+    circle at top right,
+    rgba(255,215,0,.20),
+    transparent 40%
+    );
+}
+
+/* HALO DECORATIF */
+
+.vision-hero::before{
+    content:'';
+    position:absolute;
+    width:600px;
+    height:600px;
+    top:-250px;
+    right:-200px;
+    border-radius:50%;
+    background:
+    radial-gradient(
+    rgba(255,255,255,.12),
+    transparent 70%
+    );
+}
+
+.vision-hero::after{
+    content:'';
+    position:absolute;
+    width:450px;
+    height:450px;
+    bottom:-200px;
+    left:-120px;
+    border-radius:50%;
+    background:
+    radial-gradient(
+    rgba(255,215,0,.12),
+    transparent 70%
+    );
+}
+
+/* BADGE */
+
+.vision-badge{
+    display:inline-block;
+    padding:12px 26px;
+    border-radius:50px;
+    color:#fff;
+    font-size:.95rem;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    backdrop-filter:blur(12px);
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.18);
+    box-shadow:
+    0 10px 30px rgba(0,0,0,.15);
+}
+
+/* TITRE */
+
+.vision-title{
+    font-size:clamp(2.8rem,6vw,5.2rem);
+    font-weight:900;
+    line-height:1.1;
+    color:#fff;
+    margin-top:25px;
+    margin-bottom:20px;
+    text-shadow:
+    0 10px 30px rgba(0,0,0,.25);
+}
+
+/* SOUS TITRE */
+
+.vision-subtitle{
+    color:#e8edf8;
+    font-size:1.2rem;
+    line-height:1.9;
+    margin-top:25px;
+    max-width:700px;
+}
+
+/* CITATION PRESIDENTIELLE */
+
+.president-quote{
+    margin-top:40px;
+    color:#fff;
+    font-size:1.15rem;
+    font-style:italic;
+    line-height:1.9;
+    padding:20px 0 20px 25px;
+    border-left:4px solid #FFD700;
+    max-width:700px;
+    background:
+    linear-gradient(
+    90deg,
+    rgba(255,215,0,.08),
+    transparent
+    );
+}
+
+/* BOUTONS */
+
+.hero-buttons{
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+/* BOUTON OR */
+
+.btn-gold{
+    background:#FFD700;
+    color:#002060;
+    border:none;
+    border-radius:60px;
+    font-weight:800;
+    padding:16px 38px;
+    text-decoration:none;
+    transition:.35s ease;
+    box-shadow:
+    0 15px 35px rgba(255,215,0,.25);
+}
+
+.btn-gold:hover{
+    color:#002060;
+    transform:translateY(-5px);
+    box-shadow:
+    0 20px 45px rgba(255,215,0,.35);
+}
+
+/* BOUTON VERRE */
+
+.btn-outline-light{
+    padding:16px 38px;
+    border-radius:60px;
+    text-decoration:none;
+    font-weight:700;
+    color:#fff;
+    border:2px solid rgba(255,255,255,.25);
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(12px);
+    transition:.35s ease;
+}
+
+.btn-outline-light:hover{
+    background:#fff;
+    color:#002060;
+    transform:translateY(-5px);
+}
+
+/* CADRE PRESIDENTIEL */
+
+.president-frame{
+    position:relative;
+    padding:12px;
+    border-radius:35px;
+    background:
+    linear-gradient(
+    135deg,
+    #FFD700,
+    #F5C542
+    );
+    box-shadow:
+    0 30px 80px rgba(0,0,0,.35);
+}
+
+.president-frame::before{
+    content:'';
+    position:absolute;
+    inset:-2px;
+    border-radius:35px;
+    border:1px solid rgba(255,255,255,.25);
+}
+
+/* PHOTO */
+
+.president-photo{
+    width:100%;
+    display:block;
+    border-radius:25px;
+    object-fit:cover;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:991px){
+
+    .vision-hero{
+        padding:120px 0;
+        min-height:auto;
+    }
+
+    .vision-title{
+        text-align:center;
+    }
+
+    .vision-subtitle{
+        text-align:center;
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .president-quote{
+        margin-left:auto;
+        margin-right:auto;
+    }
+
+    .hero-buttons{
+        justify-content:center;
+    }
+
+    .president-frame{
+        margin-top:60px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .vision-title{
+        font-size:2.7rem;
+    }
+
+    .vision-subtitle{
+        font-size:1.05rem;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .btn-gold,
+    .btn-outline-light{
+        width:100%;
+        text-align:center;
+        justify-content:center;
+    }
+
+}
+
+/* ====================================
+   SECTIONS GENERALES
+==================================== */
+
+.section-header{
+    margin-bottom:60px;
+}
+
+.section-header span{
+    color:#c9a227;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.section-header h2{
+    font-weight:800;
+    margin-top:15px;
+    color:#002060;
+}
+
+.section-header p{
+    max-width:700px;
+    margin:15px auto 0;
+    color:#6b7280;
+}
+
+/* ====================================
+   MESSAGE PRESIDENT
+==================================== */
+
+.president-message{
+    padding:120px 0;
+    background:#fff;
+}
+
+.message-content{
+    max-width:850px;
+    margin:auto;
+    font-size:1.1rem;
+    line-height:2;
+    color:#444;
+}
+
+/* ====================================
+   PILIERS
+==================================== */
+
+.vision-2050{
+    padding:120px 0;
+    background:#fff;
+}
+
+.pillar-card{
+    background:#fff;
+    border-radius:25px;
+    padding:40px 30px;
+    height:100%;
+    transition:.35s;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.pillar-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 30px 60px rgba(0,0,0,.15);
+}
+
+.pillar-card h3{
+    color:#002060;
+    margin-bottom:15px;
+    font-weight:700;
+}
+
+/* ====================================
+   STATS
+==================================== */
+
+.vision-stats{
+    padding:120px 0;
+    background:#f8fafc;
+}
+
+.stat-box{
+    background:#fff;
+    padding:40px;
+    border-radius:25px;
+    transition:.35s;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.stat-box:hover{
+    transform:translateY(-10px);
+}
+
+.stat-box h2{
+    font-size:3rem;
+    color:#c9a227;
+    font-weight:800;
+}
+
+/* ====================================
+   DECLARATION
+==================================== */
+
+.national-declaration{
+    padding:120px 0;
+    background:#fff;
+}
+
+.declaration-box{
+    color:#fff;
+    padding:80px;
+    border-radius:35px;
+    text-align:center;
+    background:
+    linear-gradient(
+    135deg,
+    #002060,
+    #001233);
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.25);
+}
+
+.declaration-box h2{
+    margin-bottom:30px;
+    font-weight:800;
+}
+
+/* ====================================
+   PRIORITES
+==================================== */
+
+.national-priorities{
+    padding:120px 0;
+    background:#f8fafc;
+}
+
+.priority-card{
+    background:#fff;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    height:100%;
+    transition:.35s;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.priority-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 30px 60px rgba(0,0,0,.15);
+}
+
+.priority-icon{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+/* ====================================
+GALERIE
+==================================== */
+
+.national-gallery{
+padding:120px 0;
+background:#fff;
+}
+
+.featured-photo,
+.photo-card{
+position:relative;
+overflow:hidden;
+border-radius:25px;
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+.featured-photo img,
+.small-photo{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:.5s ease;
+}
+
+.featured-photo{
+height:100%;
+}
+
+.featured-photo img{
+min-height:450px;
+}
+
+.photo-card{
+height:220px;
+}
+
+.small-photo{
+height:100%;
+}
+
+.featured-photo:hover img,
+.photo-card:hover img{
+transform:scale(1.05);
+}
+
+.photo-overlay{
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+padding:30px;
+color:#fff;
+background:
+linear-gradient(
+transparent,
+rgba(0,0,0,.85)
+);
+}
+
+.photo-overlay h3{
+margin-bottom:10px;
+font-weight:700;
+}
+
+.photo-overlay p{
+margin:0;
+opacity:.95;
+}
+
+.photo-caption{
+position:absolute;
+bottom:0;
+left:0;
+right:0;
+padding:15px;
+color:#fff;
+font-weight:600;
+text-align:center;
+background:
+linear-gradient(
+transparent,
+rgba(0,0,0,.80)
+);
+}
+
+/* ====================================
+   BANNIERE FINALE
+==================================== */
+
+.presidential-banner{
+    padding:120px 0;
+    text-align:center;
+    color:#fff;
+    background:
+    linear-gradient(
+    135deg,
+    #002060,
+    #001233);
+}
+
+.presidential-banner h2{
+    font-size:clamp(2rem,5vw,3.5rem);
+    font-weight:800;
+}
+
+.presidential-banner p{
+    margin-top:20px;
+    font-size:1.15rem;
+}
+
+
+/* ====================================
+PARTICULES HERO PRESIDENTIEL
+==================================== */
+
+.hero-particles{
+position:absolute;
+inset:0;
+pointer-events:none;
+opacity:.35;
+z-index:1;
+
+background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,215,0,.35) 2px, transparent 2px),
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,.25) 2px, transparent 2px),
+    radial-gradient(circle at 60% 70%, rgba(255,215,0,.25) 2px, transparent 2px),
+    radial-gradient(circle at 30% 80%, rgba(255,255,255,.20) 2px, transparent 2px);
+
+background-size:
+    250px 250px,
+    300px 300px,
+    350px 350px,
+    400px 400px;
+
+animation: particlesMove 20s linear infinite;
+
+}
+
+@keyframes particlesMove{
+
+from{
+    transform:translateY(0);
+}
+
+to{
+    transform:translateY(-40px);
+}
+
+}
+
+/* ====================================
+AMELIORATIONS PREMIUM HERO
+==================================== */
+
+.vision-overlay{
+z-index:2;
+}
+
+.vision-hero .container{
+position:relative;
+z-index:3;
+}
+
+.president-frame{
+transition:.5s ease;
+}
+
+.president-frame:hover{
+transform:translateY(-8px);
+box-shadow:
+0 40px 100px rgba(0,0,0,.45);
+}
+
+.vision-badge{
+box-shadow:
+0 10px 25px rgba(255,255,255,.08);
+}
+
+.vision-title{
+text-shadow:
+0 5px 20px rgba(0,0,0,.25);
+}
+
+.president-quote{
+background:
+rgba(255,255,255,.05);
+padding:20px 25px;
+border-radius:0 15px 15px 0;
+backdrop-filter:blur(8px);
+}
+
+.btn-gold{
+box-shadow:
+0 10px 25px rgba(255,215,0,.25);
+}
+
+.btn-gold:hover{
+transform:translateY(-4px);
+box-shadow:
+0 20px 40px rgba(255,215,0,.40);
+}
+
+/* ====================================
+   ANIMATIONS D'ENTREE
+==================================== */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.vision-badge,
+.vision-title,
+.vision-subtitle,
+.president-quote,
+.hero-buttons{
+    opacity:0;
+    animation:fadeUp .8s ease forwards;
+}
+
+.vision-title{
+    animation-delay:.15s;
+}
+
+.vision-subtitle{
+    animation-delay:.3s;
+}
+
+.president-quote{
+    animation-delay:.45s;
+}
+
+.hero-buttons{
+    animation-delay:.6s;
+}
+
+/* ====================================
+   RESPONSIVE GLOBAL
+==================================== */
+
+@media (max-width:768px){
+
+    /* Hero */
+
+    .hero-particles{
+        opacity:.18;
+    }
+
+    .vision-title{
+        font-size:2.4rem;
+    }
+
+    .vision-subtitle{
+        font-size:1rem;
+    }
+
+    .president-quote{
+        font-size:1rem;
+        padding:18px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .btn-gold,
+    .btn-outline-light{
+        width:100%;
+    }
+
+    .president-frame{
+        margin-top:40px;
+    }
+
+    /* Sections */
+
+    .vision-stats,
+    .vision-2050,
+    .roadmap-section,
+    .national-priorities,
+    .national-gallery,
+    .president-message{
+        padding:80px 0;
+    }
+
+    .presidential-banner{
+        padding:80px 0;
+    }
+
+    .declaration-box{
+        padding:40px 25px;
+    }
+
+    /* Galerie */
+
+    .featured-photo img{
+        min-height:300px;
+    }
+
+    .photo-card{
+        height:180px;
+    }
+
+}
+
+/* ====================================
+   ROADMAP
+==================================== */
+
+.roadmap{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    margin-top:70px;
+}
+
+.roadmap-item{
+    background:#fff;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+    transition:.35s;
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+}
+
+.roadmap-item:hover{
+    transform:translateY(-12px);
+    box-shadow:0 30px 60px rgba(0,0,0,.15);
+}
+
+.roadmap-item span{
+    display:block;
+    margin-bottom:10px;
+    font-size:2rem;
+    font-weight:800;
+    color:#c9a227;
+}
+
+/* ====================================
+   ROADMAP SECTION
+==================================== */
+
+.roadmap-section{
+    padding:120px 0;
+    background:#ffffff;
+}
+
+/* ====================================
+   AMELIORATION MOBILE
+==================================== */
+
+@media (max-width:576px){
+
+    .roadmap{
+        grid-template-columns:1fr;
+    }
+
+    .roadmap-item{
+        padding:30px;
+    }
+
+    .featured-photo img{
+        min-height:300px;
+    }
+
+}

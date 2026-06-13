@@ -1,0 +1,281 @@
+/* =========================
+   HERO PRESIDENTIEL
+========================= */
+
+.contact-hero{
+    position: relative;
+    min-height: 650px;
+    padding: 140px 0 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(4,15,32,.78),
+            rgba(4,15,32,.88)
+        ),
+        url("../images/national_contact.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.contact-hero::before{
+    content: '';
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: rgba(255,255,255,.05);
+    border-radius: 50%;
+    top: -250px;
+    right: -200px;
+    filter: blur(40px);
+}
+
+.contact-hero::after{
+    content: '';
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: rgba(255,255,255,.03);
+    border-radius: 50%;
+    bottom: -250px;
+    left: -150px;
+}
+
+.hero-content{
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+
+.hero-badge{
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 50px;
+    background: rgba(255,255,255,.12);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,.2);
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+
+.hero-title{
+    font-size: 4.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.hero-subtitle{
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    opacity: .95;
+}
+
+/* =========================
+   STATISTIQUES
+========================= */
+
+.contact-stats{
+    background: #fff;
+    padding: 80px 0;
+    position: relative;
+    z-index: 5;
+}
+
+.contact-stat{
+    text-align: center;
+}
+
+.contact-stat-number{
+    font-size: 3rem;
+    font-weight: 800;
+    color: #0b1f44;
+}
+
+.contact-stat-label{
+    color: #666;
+    font-weight: 500;
+}
+
+/* =========================
+   SECTION CONTACT
+========================= */
+
+.contact-section{
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+.contact-card{
+    background: #fff;
+    border-radius: 25px;
+    padding: 35px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.08);
+    height: 100%;
+    transition: all .4s ease;
+}
+
+.contact-card:hover{
+    transform: translateY(-8px);
+}
+
+.section-title{
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0b1f44;
+    margin-bottom: 20px;
+}
+
+.contact-item{
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.contact-icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 18px;
+    background: #0b1f44;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.contact-info h5{
+    margin-bottom: 5px;
+    font-weight: 700;
+    color: #0b1f44;
+}
+
+.contact-info p{
+    margin: 0;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* =========================
+   FORMULAIRE
+========================= */
+
+.contact-form{
+    background: #fff;
+    border-radius: 25px;
+    padding: 40px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.08);
+}
+
+.form-control{
+    border: none;
+    background: #f3f5f8;
+    border-radius: 15px;
+    padding: 15px 20px;
+    min-height: 58px;
+}
+
+.form-control:focus{
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(11,31,68,.1);
+}
+
+textarea.form-control{
+    min-height: 180px;
+}
+
+.btn-president{
+    background: #0b1f44;
+    color: #fff;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 700;
+    transition: all .4s ease;
+}
+
+.btn-president:hover{
+    background: #132f64;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* =========================
+   MAP SECTION
+========================= */
+
+.map-section{
+    padding: 0 0 100px;
+    background: #f8fafc;
+}
+
+.map-card{
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.08);
+}
+
+.map-card iframe{
+    width: 100%;
+    height: 450px;
+    border: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 992px){
+
+    .hero-title{
+        font-size: 3.5rem;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .contact-hero{
+        min-height: auto;
+        padding: 120px 0 100px;
+    }
+
+    .hero-title{
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle{
+        font-size: 1rem;
+    }
+
+    .contact-section{
+        padding: 70px 0;
+    }
+
+    .contact-form{
+        margin-top: 30px;
+        padding: 30px;
+    }
+
+    .contact-stat-number{
+        font-size: 2.2rem;
+    }
+
+    .map-card iframe{
+        height: 320px;
+    }
+
+}
