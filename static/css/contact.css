@@ -1,281 +1,805 @@
-/* =========================
-   HERO PRESIDENTIEL
-========================= */
+/* =====================================================
+   CONTACT PRESIDENTIEL ULTIMATE PREMIUM 2026
+===================================================== */
+
+:root{
+
+    --primary:#0b1f44;
+    --primary-light:#173a7a;
+    --gold:#d4af37;
+    --gold-light:#f7d774;
+    --white:#ffffff;
+    --text:#5d6778;
+    --bg:#f7f9fc;
+
+    --shadow-sm:0 10px 30px rgba(0,0,0,.08);
+    --shadow-md:0 20px 50px rgba(0,0,0,.10);
+    --shadow-lg:0 30px 80px rgba(0,0,0,.15);
+
+    --transition:.45s cubic-bezier(.4,0,.2,1);
+
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes floatY{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-20px);
+    }
+
+}
+
+@keyframes pulseGlow{
+
+    0%,100%{
+        opacity:.4;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+}
+
+@keyframes shine{
+
+    from{
+        left:-120%;
+    }
+
+    to{
+        left:120%;
+    }
+
+}
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* =====================================================
+   HERO
+===================================================== */
 
 .contact-hero{
-    position: relative;
-    min-height: 650px;
-    padding: 140px 0 120px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    overflow: hidden;
+
+    position:relative;
+    min-height:750px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+    overflow:hidden;
+
+    padding:160px 0 140px;
 
     background:
         linear-gradient(
-            rgba(4,15,32,.78),
-            rgba(4,15,32,.88)
+            135deg,
+            rgba(4,15,32,.92),
+            rgba(11,31,68,.88)
         ),
         url("../images/national_contact.jpg");
 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(212,175,55,.18),
+            transparent 40%
+        );
+
 }
 
 .contact-hero::before{
-    content: '';
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: rgba(255,255,255,.05);
-    border-radius: 50%;
-    top: -250px;
-    right: -200px;
-    filter: blur(40px);
+
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            rgba(212,175,55,.12),
+            transparent
+        );
+
+    top:-250px;
+    right:-150px;
+
+    animation:
+        floatY 12s infinite ease-in-out;
+
 }
 
 .contact-hero::after{
-    content: '';
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    background: rgba(255,255,255,.03);
-    border-radius: 50%;
-    bottom: -250px;
-    left: -150px;
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            rgba(255,255,255,.06),
+            transparent
+        );
+
+    bottom:-250px;
+    left:-150px;
+
+    animation:
+        floatY 15s infinite ease-in-out;
+
 }
 
 .hero-content{
-    position: relative;
-    z-index: 2;
-    color: #fff;
+
+    position:relative;
+    z-index:10;
+    color:#fff;
+
+    animation:
+        fadeUp 1s ease;
+
 }
 
 .hero-badge{
-    display: inline-block;
-    padding: 12px 28px;
-    border-radius: 50px;
-    background: rgba(255,255,255,.12);
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,.2);
-    color: #fff;
-    font-weight: 600;
-    letter-spacing: 1px;
-    margin-bottom: 25px;
-    text-transform: uppercase;
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:14px 30px;
+
+    border-radius:60px;
+
+    background:
+        rgba(255,255,255,.10);
+
+    backdrop-filter:blur(15px);
+
+    border:
+        1px solid rgba(255,255,255,.18);
+
+    color:#fff;
+
+    font-weight:700;
+    letter-spacing:1px;
+
+    margin-bottom:30px;
+
 }
 
 .hero-title{
-    font-size: 4.5rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-    line-height: 1.1;
+
+    font-size:5rem;
+    font-weight:900;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
+
+    text-shadow:
+        0 10px 40px rgba(0,0,0,.3);
+
 }
 
 .hero-subtitle{
-    max-width: 750px;
-    margin: 0 auto;
-    font-size: 1.15rem;
-    line-height: 1.8;
-    opacity: .95;
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:1.15rem;
+
+    line-height:2;
+
+    color:
+        rgba(255,255,255,.92);
+
 }
 
-/* =========================
-   STATISTIQUES
-========================= */
+.hero-actions{
 
-.contact-stats{
-    background: #fff;
-    padding: 80px 0;
-    position: relative;
-    z-index: 5;
+    display:flex;
+    justify-content:center;
+    gap:18px;
+
+    flex-wrap:wrap;
+
+    margin-top:45px;
+
 }
 
-.contact-stat{
-    text-align: center;
-}
+/* =====================================================
+   BOUTONS PREMIUM
+===================================================== */
 
-.contact-stat-number{
-    font-size: 3rem;
-    font-weight: 800;
-    color: #0b1f44;
-}
+.btn-president,
+.btn-outline-president{
 
-.contact-stat-label{
-    color: #666;
-    font-weight: 500;
-}
+    position:relative;
 
-/* =========================
-   SECTION CONTACT
-========================= */
+    overflow:hidden;
 
-.contact-section{
-    padding: 100px 0;
-    background: #f8fafc;
-}
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
 
-.contact-card{
-    background: #fff;
-    border-radius: 25px;
-    padding: 35px;
-    box-shadow: 0 20px 50px rgba(0,0,0,.08);
-    height: 100%;
-    transition: all .4s ease;
-}
+    padding:16px 38px;
 
-.contact-card:hover{
-    transform: translateY(-8px);
-}
+    border-radius:60px;
 
-.section-title{
-    font-size: 2rem;
-    font-weight: 800;
-    color: #0b1f44;
-    margin-bottom: 20px;
-}
+    font-weight:700;
 
-.contact-item{
-    display: flex;
-    align-items: flex-start;
-    gap: 15px;
-    margin-bottom: 25px;
-}
+    text-decoration:none;
 
-.contact-icon{
-    width: 60px;
-    height: 60px;
-    border-radius: 18px;
-    background: #0b1f44;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.4rem;
-    flex-shrink: 0;
-}
+    transition:var(--transition);
 
-.contact-info h5{
-    margin-bottom: 5px;
-    font-weight: 700;
-    color: #0b1f44;
-}
-
-.contact-info p{
-    margin: 0;
-    color: #666;
-    line-height: 1.7;
-}
-
-/* =========================
-   FORMULAIRE
-========================= */
-
-.contact-form{
-    background: #fff;
-    border-radius: 25px;
-    padding: 40px;
-    box-shadow: 0 20px 50px rgba(0,0,0,.08);
-}
-
-.form-control{
-    border: none;
-    background: #f3f5f8;
-    border-radius: 15px;
-    padding: 15px 20px;
-    min-height: 58px;
-}
-
-.form-control:focus{
-    background: #fff;
-    box-shadow: 0 0 0 4px rgba(11,31,68,.1);
-}
-
-textarea.form-control{
-    min-height: 180px;
 }
 
 .btn-president{
-    background: #0b1f44;
-    color: #fff;
-    border: none;
-    padding: 15px 35px;
-    border-radius: 50px;
-    font-weight: 700;
-    transition: all .4s ease;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--gold),
+            var(--gold-light)
+        );
+
+    color:#111;
+
+    box-shadow:
+        0 15px 35px rgba(212,175,55,.35);
+
+}
+
+.btn-president::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:60px;
+    height:200%;
+
+    background:
+        rgba(255,255,255,.5);
+
+    transform:rotate(25deg);
+
+    left:-150%;
+
+}
+
+.btn-president:hover::before{
+
+    animation:
+        shine 1.2s linear;
+
 }
 
 .btn-president:hover{
-    background: #132f64;
-    color: #fff;
-    transform: translateY(-3px);
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 20px 50px rgba(212,175,55,.45);
+
 }
 
-/* =========================
-   MAP SECTION
-========================= */
+.btn-outline-president{
+
+    border:
+        2px solid rgba(255,255,255,.25);
+
+    color:#fff;
+
+    backdrop-filter:blur(10px);
+
+    background:
+        rgba(255,255,255,.05);
+
+}
+
+.btn-outline-president:hover{
+
+    background:
+        rgba(255,255,255,.12);
+
+    color:#fff;
+
+    transform:
+        translateY(-5px);
+
+}
+
+/* =====================================================
+   FLOATING LIGHTS
+===================================================== */
+
+.floating-light{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(60px);
+
+    animation:
+        pulseGlow 8s infinite ease;
+
+}
+
+.light-1{
+
+    width:300px;
+    height:300px;
+
+    background:
+        rgba(212,175,55,.18);
+
+    top:15%;
+    left:10%;
+
+}
+
+.light-2{
+
+    width:250px;
+    height:250px;
+
+    background:
+        rgba(255,255,255,.10);
+
+    right:12%;
+    bottom:15%;
+
+}
+
+.light-3{
+
+    width:180px;
+    height:180px;
+
+    background:
+        rgba(212,175,55,.12);
+
+    top:50%;
+    right:25%;
+
+}
+
+/* =====================================================
+   STATS
+===================================================== */
+
+.presidential-stats{
+
+    background:#fff;
+
+    padding:90px 0;
+
+    margin-top:-70px;
+
+    position:relative;
+    z-index:20;
+
+}
+
+.stat-card{
+
+    background:#fff;
+
+    border-radius:30px;
+
+    padding:40px 25px;
+
+    text-align:center;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition);
+
+    height:100%;
+
+}
+
+.stat-card:hover{
+
+    transform:
+        translateY(-10px);
+
+    box-shadow:
+        var(--shadow-lg);
+
+}
+
+.stat-icon{
+
+    width:80px;
+    height:80px;
+
+    margin:auto auto 20px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--primary-light)
+        );
+
+    color:#fff;
+
+    font-size:1.8rem;
+
+}
+
+.stat-card h2{
+
+    font-size:3rem;
+    font-weight:900;
+
+    color:var(--primary);
+
+}
+
+.stat-card p{
+
+    margin:0;
+    color:var(--text);
+
+}
+
+/* =====================================================
+   CONTACT SECTION
+===================================================== */
+
+.contact-section{
+
+    padding:120px 0;
+
+    background:var(--bg);
+
+}
+
+.contact-card,
+.contact-form{
+
+    background:
+        rgba(255,255,255,.95);
+
+    backdrop-filter:blur(12px);
+
+    border-radius:30px;
+
+    padding:40px;
+
+    box-shadow:var(--shadow-md);
+
+    transition:var(--transition);
+
+    border:
+        1px solid rgba(255,255,255,.6);
+
+}
+
+.contact-card:hover,
+.contact-form:hover{
+
+    transform:
+        translateY(-8px);
+
+}
+
+.section-title{
+
+    color:var(--primary);
+
+    font-size:2.2rem;
+
+    font-weight:800;
+
+    margin-bottom:25px;
+
+}
+
+.contact-item{
+
+    display:flex;
+    gap:18px;
+
+    margin-bottom:28px;
+
+}
+
+.contact-icon{
+
+    width:65px;
+    height:65px;
+
+    flex-shrink:0;
+
+    border-radius:20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--primary-light)
+        );
+
+    color:#fff;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:1.4rem;
+
+    box-shadow:
+        0 15px 35px rgba(11,31,68,.20);
+
+}
+
+.contact-info h5{
+
+    color:var(--primary);
+    font-weight:700;
+
+}
+
+.contact-info p{
+
+    color:var(--text);
+    margin:0;
+
+}
+
+/* =====================================================
+   PRESIDENT NOTE
+===================================================== */
+
+.president-note{
+
+    margin-bottom:35px;
+
+}
+
+.gold-line{
+
+    width:70px;
+    height:4px;
+
+    border-radius:10px;
+
+    display:block;
+
+    margin-bottom:15px;
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--gold),
+            var(--gold-light)
+        );
+
+}
+
+/* =====================================================
+   FORMULAIRE
+===================================================== */
+
+.premium-input{
+
+    background:#f7f9fc;
+
+    border:2px solid transparent;
+
+    border-radius:18px;
+
+    min-height:60px;
+
+    padding:15px 22px;
+
+    margin-bottom:20px;
+
+    transition:var(--transition);
+
+}
+
+.premium-input:focus{
+
+    border-color:var(--gold);
+
+    background:#fff;
+
+    box-shadow:
+        0 0 0 5px rgba(212,175,55,.12);
+
+}
+
+textarea.premium-input{
+
+    min-height:180px;
+    resize:none;
+
+}
+
+.form-badge{
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    border-radius:50px;
+
+    background:
+        rgba(212,175,55,.12);
+
+    color:var(--gold);
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+/* =====================================================
+   MAP
+===================================================== */
 
 .map-section{
-    padding: 0 0 100px;
-    background: #f8fafc;
+
+    background:var(--bg);
+
+    padding:0 0 120px;
+
 }
 
 .map-card{
-    overflow: hidden;
-    border-radius: 25px;
-    box-shadow: 0 20px 50px rgba(0,0,0,.08);
+
+    overflow:hidden;
+
+    border-radius:35px;
+
+    box-shadow:var(--shadow-lg);
+
+    transition:var(--transition);
+
+}
+
+.map-card:hover{
+
+    transform:
+        translateY(-8px);
+
 }
 
 .map-card iframe{
-    width: 100%;
-    height: 450px;
-    border: none;
+
+    width:100%;
+    height:550px;
+
+    border:none;
+
 }
 
-/* =========================
+/* =====================================================
    RESPONSIVE
-========================= */
+===================================================== */
 
-@media (max-width: 992px){
+@media(max-width:992px){
 
     .hero-title{
-        font-size: 3.5rem;
+        font-size:3.8rem;
     }
 
 }
 
-@media (max-width: 768px){
+@media(max-width:768px){
 
     .contact-hero{
-        min-height: auto;
-        padding: 120px 0 100px;
+
+        min-height:auto;
+
+        padding:130px 0 100px;
+
     }
 
     .hero-title{
-        font-size: 2.5rem;
+
+        font-size:2.7rem;
+
     }
 
     .hero-subtitle{
-        font-size: 1rem;
+
+        font-size:1rem;
+
+        line-height:1.8;
+
     }
 
-    .contact-section{
-        padding: 70px 0;
+    .hero-actions{
+
+        flex-direction:column;
+
+        align-items:center;
+
     }
 
+    .btn-president,
+    .btn-outline-president{
+
+        width:100%;
+
+        max-width:320px;
+
+    }
+
+    .contact-card,
     .contact-form{
-        margin-top: 30px;
-        padding: 30px;
+
+        padding:30px;
+
     }
 
-    .contact-stat-number{
-        font-size: 2.2rem;
+    .stat-card h2{
+
+        font-size:2.3rem;
+
     }
 
     .map-card iframe{
-        height: 320px;
+
+        height:350px;
+
     }
 
 }

@@ -7,37 +7,51 @@
 
 {% block content %}
 
-<!-- HERO PRESIDENTIEL PREMIUM -->
+<!-- =========================================
+HERO PRESIDENTIEL ULTIMATE PREMIUM
+========================================= -->
 
 <section class="program-hero">
 
-    <div class="container text-center">
+    <!-- Effets décoratifs -->
+    <div class="hero-shape shape-1"></div>
+    <div class="hero-shape shape-2"></div>
+    <div class="hero-shape shape-3"></div>
 
-        <span class="program-badge">
-            PROGRAMME NATIONAL
-        </span>
+    <div class="container">
 
-        <h1 class="program-title">
-            Bâtir Une Nation Forte,<br>
-            Moderne et Prospère
-        </h1>
+        <div class="hero-content text-center">
 
-        <p class="program-subtitle">
-            Une feuille de route ambitieuse pour transformer durablement
-            notre pays grâce à une gouvernance exemplaire, une économie
-            compétitive, une jeunesse valorisée et des institutions fortes
-            au service de chaque citoyen.
-        </p>
+            <span class="program-badge">
+                <i class="bi bi-stars"></i>
+                PROGRAMME NATIONAL
+            </span>
 
-        <div class="hero-actions">
+            <h1 class="program-title">
+                Bâtir Une Nation Forte,<br>
+                Moderne et Prospère
+            </h1>
 
-            <a href="#priorites" class="btn-president">
-                Découvrir le Programme
-            </a>
+            <p class="program-subtitle">
+                Une feuille de route ambitieuse pour transformer durablement
+                notre pays grâce à une gouvernance exemplaire, une économie
+                compétitive, une jeunesse valorisée et des institutions fortes
+                au service de chaque citoyen.
+            </p>
 
-            <a href="{% url 'contact' %}" class="btn-outline-president">
-                Rejoindre le Mouvement
-            </a>
+            <div class="hero-actions">
+
+                <a href="#priorites" class="btn-president">
+                    <span>Découvrir le Programme</span>
+                    <i class="bi bi-arrow-right-circle-fill"></i>
+                </a>
+
+                <a href="{% url 'contact' %}" class="btn-outline-president">
+                    <span>Rejoindre le Mouvement</span>
+                    <i class="bi bi-people-fill"></i>
+                </a>
+
+            </div>
 
         </div>
 
@@ -45,30 +59,69 @@
 
 </section>
 
+<!-- ==========================================
+VISION & PRIORITÉS NATIONALES - ULTIMATE PREMIUM
+=========================================== -->
+
 <!-- VISION -->
 
-<section class="vision-section">
+<section class="vision-section position-relative overflow-hidden">
 
-    <div class="container text-center">
+    <div class="vision-bg-shape shape-1"></div>
+    <div class="vision-bg-shape shape-2"></div>
 
-        <h2 class="section-title">
-            Notre Vision
-        </h2>
+    <div class="container">
 
-        <div class="section-line"></div>
+        <div class="row justify-content-center">
 
-        <p class="vision-text">
-            Nous croyons en un État fort, transparent et performant,
-            capable de répondre efficacement aux défis du XXIe siècle.
-            Notre engagement est de placer l'humain au cœur
-            de toutes les politiques publiques afin de garantir
-            le progrès social, la croissance économique et
-            la stabilité nationale.
-        </p>
+            <div class="col-lg-10">
+
+                <div class="vision-card text-center">
+
+                    <span class="section-badge">
+                        Notre Ambition
+                    </span>
+
+                    <h2 class="section-title">
+                        Notre Vision
+                    </h2>
+
+                    <div class="section-line"></div>
+
+                    <p class="vision-text">
+                        Nous croyons en un État fort, transparent et performant,
+                        capable de répondre efficacement aux défis du XXIe siècle.
+                        Notre engagement est de placer l'humain au cœur
+                        de toutes les politiques publiques afin de garantir
+                        le progrès social, la croissance économique,
+                        la stabilité nationale et la souveraineté durable.
+                    </p>
+
+                    <div class="vision-actions">
+
+                        <a href="#priorites"
+                           class="btn btn-premium">
+                            Découvrir nos priorités
+                        </a>
+
+                        <a href="#contact"
+                           class="btn btn-outline-premium">
+                            Nous rejoindre
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 
 </section>
+
+<!-- PRIORITÉS -->
 
 <section class="priority-section" id="priorites">
 
@@ -76,58 +129,151 @@
 
         <div class="text-center mb-5">
 
+            <span class="section-badge">
+                Programme National
+            </span>
+
             <h2 class="section-title">
                 Les Grandes Priorités Nationales
             </h2>
 
             <div class="section-line"></div>
 
+            <p class="section-subtitle">
+                Des actions concrètes pour bâtir une nation moderne,
+                prospère et souveraine.
+            </p>
+
         </div>
 
         <div class="row g-4">
 
-            <div class="col-lg-3 col-md-6">
-                <div class="priority-card">
-                    <span>01</span>
-                    <h4>Souveraineté</h4>
-                    <p>
-                        Renforcer les institutions et garantir
-                        l'indépendance stratégique du pays.
-                    </p>
-                </div>
-            </div>
+            <!-- PRIORITE 1 -->
 
             <div class="col-lg-3 col-md-6">
+
                 <div class="priority-card">
-                    <span>02</span>
-                    <h4>Transformation Économique</h4>
+
+                    <div class="priority-number">
+                        01
+                    </div>
+
+                    <div class="priority-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
+                    <h4>
+                        Souveraineté
+                    </h4>
+
                     <p>
-                        Accélérer l'industrialisation et soutenir
-                        l'investissement productif.
+                        Renforcer les institutions, protéger les intérêts
+                        stratégiques du pays et garantir une gouvernance forte.
                     </p>
+
+                    <a href="#" class="card-link">
+                        En savoir plus
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
                 </div>
+
             </div>
 
-            <div class="col-lg-3 col-md-6">
-                <div class="priority-card">
-                    <span>03</span>
-                    <h4>Capital Humain</h4>
-                    <p>
-                        Éducation, santé et compétences au cœur
-                        du développement.
-                    </p>
-                </div>
-            </div>
+            <!-- PRIORITE 2 -->
 
             <div class="col-lg-3 col-md-6">
+
                 <div class="priority-card">
-                    <span>04</span>
-                    <h4>Innovation</h4>
+
+                    <div class="priority-number">
+                        02
+                    </div>
+
+                    <div class="priority-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h4>
+                        Transformation Économique
+                    </h4>
+
                     <p>
-                        Faire du numérique et de la technologie
-                        un moteur de croissance.
+                        Accélérer l'industrialisation, soutenir l'investissement
+                        et développer les filières stratégiques.
                     </p>
+
+                    <a href="#" class="card-link">
+                        En savoir plus
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
                 </div>
+
+            </div>
+
+            <!-- PRIORITE 3 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="priority-card">
+
+                    <div class="priority-number">
+                        03
+                    </div>
+
+                    <div class="priority-icon">
+                        <i class="bi bi-mortarboard"></i>
+                    </div>
+
+                    <h4>
+                        Capital Humain
+                    </h4>
+
+                    <p>
+                        Investir dans l'éducation, la santé et la formation
+                        pour préparer les générations futures.
+                    </p>
+
+                    <a href="#" class="card-link">
+                        En savoir plus
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- PRIORITE 4 -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div class="priority-card">
+
+                    <div class="priority-number">
+                        04
+                    </div>
+
+                    <div class="priority-icon">
+                        <i class="bi bi-cpu"></i>
+                    </div>
+
+                    <h4>
+                        Innovation
+                    </h4>
+
+                    <p>
+                        Faire du numérique, de la recherche et des technologies
+                        émergentes les moteurs de la croissance.
+                    </p>
+
+                    <a href="#" class="card-link">
+                        En savoir plus
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
             </div>
 
         </div>
@@ -136,17 +282,42 @@
 
 </section>
 
-<!-- PROGRAMMES -->
+<!-- =========================================
+PROGRAMMES PREMIUM ULTIMATE
+========================================= -->
 
 <section class="program-section">
 
     <div class="container">
 
+        <!-- Section Header -->
+
+        <div class="section-header text-center mb-5">
+
+            <span class="section-badge">
+                Nos Priorités
+            </span>
+
+            <h2 class="section-title">
+                Un Programme Ambitieux Pour Tous
+            </h2>
+
+            <p class="section-subtitle">
+                Des solutions concrètes pour bâtir un Sénégal moderne,
+                prospère, inclusif et tourné vers l'avenir.
+            </p>
+
+        </div>
+
         <div class="row g-4">
 
-            <div class="col-lg-6">
+            <!-- Santé -->
+
+            <div class="col-lg-6 col-md-6">
 
                 <div class="program-card">
+
+                    <div class="card-glow"></div>
 
                     <div class="program-icon">
                         🏥
@@ -161,13 +332,21 @@
                         et amélioration des équipements sanitaires.
                     </p>
 
+                    <div class="program-footer">
+                        <span>Priorité Nationale</span>
+                    </div>
+
                 </div>
 
             </div>
 
-            <div class="col-lg-6">
+            <!-- Education -->
+
+            <div class="col-lg-6 col-md-6">
 
                 <div class="program-card">
+
+                    <div class="card-glow"></div>
 
                     <div class="program-icon">
                         🎓
@@ -181,13 +360,21 @@
                         et égalité des chances pour tous.
                     </p>
 
+                    <div class="program-footer">
+                        <span>Investir dans l'avenir</span>
+                    </div>
+
                 </div>
 
             </div>
 
-            <div class="col-lg-6">
+            <!-- Emploi -->
+
+            <div class="col-lg-6 col-md-6">
 
                 <div class="program-card">
+
+                    <div class="card-glow"></div>
 
                     <div class="program-icon">
                         💼
@@ -199,16 +386,24 @@
                         Soutien massif à l'entrepreneuriat,
                         développement industriel,
                         création d'emplois durables
-                        et insertion des jeunes.
+                        et insertion professionnelle des jeunes.
                     </p>
+
+                    <div class="program-footer">
+                        <span>Croissance Durable</span>
+                    </div>
 
                 </div>
 
             </div>
 
-            <div class="col-lg-6">
+            <!-- Numérique -->
+
+            <div class="col-lg-6 col-md-6">
 
                 <div class="program-card">
+
+                    <div class="card-glow"></div>
 
                     <div class="program-icon">
                         💻
@@ -223,6 +418,10 @@
                         et transformation digitale nationale.
                     </p>
 
+                    <div class="program-footer">
+                        <span>Sénégal Digital</span>
+                    </div>
+
                 </div>
 
             </div>
@@ -233,39 +432,106 @@
 
 </section>
 
-<!-- STATISTIQUES -->
+<!-- ==========================================
+STATISTIQUES PREMIUM ULTIMATE
+========================================== -->
 
 <section class="stats-section">
 
     <div class="container">
 
-        <div class="row">
+        <div class="section-title text-center mb-5">
+            <span class="stats-badge">
+                <i class="bi bi-bar-chart-line-fill"></i>
+                NOS ENGAGEMENTS
+            </span>
 
-            <div class="col-md-3 col-6 mb-4">
+            <h2 class="stats-heading">
+                Une Vision Claire Pour
+                <span>Un Sénégal Plus Fort</span>
+            </h2>
+
+            <p class="stats-description">
+                Des actions concrètes, une vision ambitieuse et un engagement
+                permanent au service du peuple sénégalais.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Stat 1 -->
+            <div class="col-lg-3 col-md-6 col-6">
                 <div class="stat-box">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-heart-fill"></i>
+                    </div>
+
                     <div class="stat-number">100%</div>
-                    <div class="stat-label">ENGAGEMENT</div>
+
+                    <div class="stat-label">
+                        ENGAGEMENT
+                    </div>
+
+                    <div class="stat-glow"></div>
+
                 </div>
             </div>
 
-            <div class="col-md-3 col-6 mb-4">
+            <!-- Stat 2 -->
+            <div class="col-lg-3 col-md-6 col-6">
                 <div class="stat-box">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-clock-fill"></i>
+                    </div>
+
                     <div class="stat-number">24/7</div>
-                    <div class="stat-label">AU SERVICE DU PEUPLE</div>
+
+                    <div class="stat-label">
+                        AU SERVICE DU PEUPLE
+                    </div>
+
+                    <div class="stat-glow"></div>
+
                 </div>
             </div>
 
-            <div class="col-md-3 col-6 mb-4">
+            <!-- Stat 3 -->
+            <div class="col-lg-3 col-md-6 col-6">
                 <div class="stat-box">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-stars"></i>
+                    </div>
+
                     <div class="stat-number">2035</div>
-                    <div class="stat-label">VISION STRATÉGIQUE</div>
+
+                    <div class="stat-label">
+                        VISION STRATÉGIQUE
+                    </div>
+
+                    <div class="stat-glow"></div>
+
                 </div>
             </div>
 
-            <div class="col-md-3 col-6 mb-4">
+            <!-- Stat 4 -->
+            <div class="col-lg-3 col-md-6 col-6">
                 <div class="stat-box">
+
+                    <div class="stat-icon">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+
                     <div class="stat-number">1</div>
-                    <div class="stat-label">NATION UNIE</div>
+
+                    <div class="stat-label">
+                        NATION UNIE
+                    </div>
+
+                    <div class="stat-glow"></div>
+
                 </div>
             </div>
 
@@ -274,12 +540,19 @@
     </div>
 
 </section>
+<!-- ==================================================
+CITATION DU PRÉSIDENT
+================================================== -->
 
 <section class="president-quote">
 
     <div class="container">
 
         <div class="quote-box">
+
+            <div class="quote-icon">
+                <i class="bi bi-quote"></i>
+            </div>
 
             <h3>
                 « Le développement durable d'une nation repose sur
@@ -293,7 +566,9 @@
 
 </section>
 
-<!-- ENGAGEMENT -->
+<!-- ==================================================
+ENGAGEMENT DU MOUVEMENT
+================================================== -->
 
 <section class="commitment-section">
 
@@ -301,26 +576,46 @@
 
         <div class="commitment-box">
 
+            <span class="commitment-badge">
+                Engagement National
+            </span>
+
             <h2>
                 Notre Engagement envers la Nation
             </h2>
 
+            <div class="divider-line"></div>
+
             <p>
                 Nous nous engageons à gouverner avec intégrité,
                 responsabilité et transparence.
+
                 Chaque décision sera guidée par l'intérêt général,
                 le développement durable et le bien-être de tous
                 les citoyens.
+
+                Notre vision repose sur une gouvernance moderne,
+                participative et tournée vers l'avenir afin de
+                bâtir une nation forte, prospère et solidaire.
             </p>
 
-            <a href="{% url 'contact' %}" class="btn-president">
-                Rejoindre le Mouvement
-            </a>
+            <div class="commitment-actions">
+
+                <a href="{% url 'contact' %}" class="btn-president">
+
+                    <span>
+                        Rejoindre le Mouvement
+                    </span>
+
+                    <i class="bi bi-arrow-right-circle-fill"></i>
+
+                </a>
+
+            </div>
 
         </div>
 
     </div>
 
 </section>
-
 {% endblock %}

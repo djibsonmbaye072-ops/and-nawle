@@ -1,5 +1,42 @@
 from django.db import models
+from django.utils.text import slugify
+
 from core.models import BaseModel
+
+
+class Category(models.Model):
+
+    name = models.CharField(
+        max_length=100,
+        unique=True,
+        verbose_name="Nom"
+    )
+
+    slug = models.SlugField(
+        unique=True,
+        blank=True,
+        verbose_name="Slug"
+    )
+
+    class Meta:
+
+        verbose_name = "Catégorie"
+
+        verbose_name_plural = "Catégories"
+
+        ordering = ["name"]
+
+    def save(self, *args, **kwargs):
+
+        if not self.slug:
+
+            self.slug = slugify(self.name)
+
+        super().save(*args, **kwargs)
+
+    def __str__(self):
+
+        return self.name
 
 
 class News(BaseModel):
@@ -7,6 +44,15 @@ class News(BaseModel):
     title = models.CharField(
         max_length=255,
         verbose_name="Titre"
+    )
+
+    category = models.ForeignKey(
+        Category,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="articles",
+        verbose_name="Catégorie"
     )
 
     slug = models.SlugField(
@@ -50,11 +96,39 @@ class News(BaseModel):
     )
 
     class Meta:
+
         verbose_name = "Actualité"
+
         verbose_name_plural = "Actualités"
+
         ordering = ["-published_at"]
 
+    def save(self, *args, **kwargs):
+
+        if not self.slug:
+
+            base_slug = slugify(self.title)
+
+            slug = base_slug
+
+            counter = 1
+
+            while News.objects.filter(
+                slug=slug
+            ).exclude(
+                pk=self.pk
+            ).exists():
+
+                slug = f"{base_slug}-{counter}"
+
+                counter += 1
+
+            self.slug = slug
+
+        super().save(*args, **kwargs)
+
     def __str__(self):
+
         return self.title
 
 
@@ -79,10 +153,13 @@ class NewsImage(models.Model):
     )
 
     class Meta:
+
         verbose_name = "Image"
+
         verbose_name_plural = "Galerie Photos"
 
     def __str__(self):
+
         return f"{self.news.title} - Image"
 
 
@@ -105,8 +182,11 @@ class NewsVideo(models.Model):
     )
 
     class Meta:
+
         verbose_name = "Vidéo"
+
         verbose_name_plural = "Vidéos"
 
     def __str__(self):
+
         return self.title

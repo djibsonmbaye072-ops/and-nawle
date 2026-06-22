@@ -1,19 +1,19 @@
 from django.urls import path
+from . import views
 
-from .views import news_detail
-from .views import news_list
+app_name = "news"
 
 urlpatterns = [
 
     path(
         "",
-        news_list,
+        views.news_list,
         name="news_list"
     ),
 
     path(
-        "<int:pk>/",
-        news_detail,
+        "<slug:slug>/",
+        views.news_detail,
         name="news_detail"
     ),
 

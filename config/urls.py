@@ -7,22 +7,36 @@ from django.conf.urls.static import static
 
 urlpatterns = [
 
-    # Administration Django
+    # ==================================================
+    # ADMINISTRATION DJANGO
+    # ==================================================
     path(
         "admin/",
         admin.site.urls
     ),
 
-    # Pages principales
+    # ==================================================
+    # PAGES PRINCIPALES
+    # ==================================================
     path(
         "",
         include("pages.urls")
     ),
 
-    # Actualités
+    # ==================================================
+    # ACTUALITÉS
+    # ==================================================
     path(
         "actualites/",
         include("news.urls")
+    ),
+
+    # ==================================================
+    # PRÉSIDENT DU MOUVEMENT
+    # ==================================================
+    path(
+        "president/",
+        include("leadership.urls")
     ),
 
 ]

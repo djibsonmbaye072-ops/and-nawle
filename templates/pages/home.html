@@ -3,415 +3,114 @@
 
 {% block content %}
 
-<!-- HERO -->
+<!-- ==================================================
+HERO SECTION - AND NAWLE ULTIMATE PREMIUM
+================================================== -->
 
 <section class="hero">
 
+    <!-- Background Effects -->
+
     <div class="hero-overlay"></div>
 
-    <div class="container">
-
-        <div class="row align-items-center min-vh-100">
-
-            <div
-                class="col-lg-6"
-                data-aos="fade-right">
-
-                <span class="hero-badge">
-                    🇸🇳 Mouvement Politique National
-                </span>
-
-                <h1 class="hero-title">
-                    AND NAWLE
-                </h1>
-
-                <h2 class="hero-subtitle">
-                    LA MARCHE DES TERRITOIRES
-                </h2>
-
-                <p class="hero-description">
-
-                    Nous croyons en un Sénégal où chaque territoire
-                    devient un moteur de développement,
-                    d’innovation et de prospérité.
-
-                </p>
-
-                <div class="hero-stats">
-
-                    <div class="hero-stat">
-                        <h3>14</h3>
-                        <span>Régions</span>
-                    </div>
-
-                    <div class="hero-stat">
-                        <h3>46</h3>
-                        <span>Départements</span>
-                    </div>
-
-                    <div class="hero-stat">
-                        <h3>557</h3>
-                        <span>Communes</span>
-                    </div>
-
-                </div>
-
-                <div class="hero-buttons">
-
-                    <a
-                        href="{% url 'vision' %}"
-                        class="btn btn-light btn-lg">
-
-                        Découvrir notre Vision
-
-                    </a>
-
-                    <a
-                        href="{% url 'adhesion' %}"
-                        class="btn btn-outline-light btn-lg">
-
-                        Rejoindre le Mouvement
-
-                    </a>
-
-                </div>
-
-            </div>
-
-            <div
-                class="col-lg-6 text-center"
-                data-aos="zoom-in">
-
-                <img
-                    src="{% static 'images/logo.png' %}"
-                    class="hero-logo"
-                    alt="AND NAWLE">
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- VISION -->
-
-<section id="vision" class="py-5">
+    <div class="hero-shape hero-shape-1"></div>
+    <div class="hero-shape hero-shape-2"></div>
+    <div class="hero-shape hero-shape-3"></div>
 
     <div class="container">
 
-        <div
-            class="section-header text-center"
-            data-aos="fade-up">
+        <div class="row align-items-center min-vh-100 g-5">
 
-            <span class="section-badge">
-                NOTRE VISION
-            </span>
+            <!-- LEFT CONTENT -->
 
-            <h2>
-                Un Sénégal fort dans l’unité de ses territoires
-            </h2>
+            <div class="col-lg-6" data-aos="fade-right">
 
-            <p>
-                Chaque citoyen mérite les mêmes opportunités,
-                quel que soit son territoire.
-            </p>
+                <div class="hero-content">
 
-        </div>
+                    <span class="hero-badge">
 
-        <div class="row g-4 mt-4">
+                        <i class="bi bi-flag-fill me-2"></i>
+                        Mouvement Politique National
 
-            <div class="col-lg-4" data-aos="fade-up">
-                <div class="vision-card">
-                    <div class="vision-icon">
-                        <i class="bi bi-hospital"></i>
+                    </span>
+
+                    <h1 class="hero-title">
+                        AND NAWLE
+                    </h1>
+
+                    <h2 class="hero-subtitle">
+                        LA MARCHE DES TERRITOIRES
+                    </h2>
+
+                    <p class="hero-description">
+
+                        Nous croyons en un Sénégal où chaque territoire
+                        devient un moteur de développement,
+                        d'innovation, d'inclusion sociale et de prospérité durable.
+
+                    </p>
+
+                    <!-- STATS -->
+
+                    <div class="hero-stats">
+
+                        <div class="hero-stat">
+
+                            <div class="stat-icon">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+
+                            <h3 class="counter">14</h3>
+
+                            <span>Régions</span>
+
+                        </div>
+
+                        <div class="hero-stat">
+
+                            <div class="stat-icon">
+                                <i class="bi bi-building"></i>
+                            </div>
+
+                            <h3 class="counter">46</h3>
+
+                            <span>Départements</span>
+
+                        </div>
+
+                        <div class="hero-stat">
+
+                            <div class="stat-icon">
+                                <i class="bi bi-people-fill"></i>
+                            </div>
+
+                            <h3 class="counter">557</h3>
+
+                            <span>Communes</span>
+
+                        </div>
+
                     </div>
-                    <h4>Santé</h4>
-                    <p>
-                        Accès équitable à des soins modernes
-                        dans tout le Sénégal.
-                    </p>
-                </div>
-            </div>
 
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="vision-card">
-                    <div class="vision-icon">
-                        <i class="bi bi-mortarboard"></i>
-                    </div>
-                    <h4>Éducation</h4>
-                    <p>
-                        Former une jeunesse compétente
-                        et compétitive.
-                    </p>
-                </div>
-            </div>
+                    <!-- BUTTONS -->
 
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="vision-card">
-                    <div class="vision-icon">
-                        <i class="bi bi-cpu"></i>
-                    </div>
-                    <h4>Numérique</h4>
-                    <p>
-                        Faire du numérique un levier
-                        majeur de croissance.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- VALEURS -->
-
-<section class="py-5 bg-light">
-
-    <div class="container">
-
-        <div class="section-header text-center" data-aos="fade-up">
-
-            <span class="section-badge">
-                NOS VALEURS
-            </span>
-
-            <h2>
-                Pourquoi AND NAWLE ?
-            </h2>
-
-            <p>
-                Une approche centrée sur les territoires
-                et les citoyens.
-            </p>
-
-        </div>
-
-        <div class="row g-4 mt-4">
-
-            <div class="col-lg-4" data-aos="zoom-in">
-                <div class="vision-card">
-                    <div class="vision-icon">
-                        <i class="bi bi-geo-alt"></i>
-                    </div>
-                    <h4>Territoires</h4>
-                    <p>
-                        Développement équilibré
-                        de toutes les régions.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
-                <div class="vision-card">
-                    <div class="vision-icon">
-                        <i class="bi bi-people"></i>
-                    </div>
-                    <h4>Citoyens</h4>
-                    <p>
-                        Participation active
-                        des populations.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
-                <div class="vision-card">
-                    <div class="vision-icon">
-                        <i class="bi bi-bar-chart"></i>
-                    </div>
-                    <h4>Résultats</h4>
-                    <p>
-                        Des actions mesurables
-                        et durables.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- PRIORITES -->
-
-<section class="py-5">
-
-    <div class="container">
-
-        <div class="section-header text-center">
-            <h2>Nos Priorités</h2>
-        </div>
-
-        <div class="row g-4 mt-4">
-
-            <div class="col-lg-3" data-aos="flip-left">
-                <div class="priority-box">
-                    <h3>01</h3>
-                    <h5>Développement Territorial</h5>
-                </div>
-            </div>
-
-            <div class="col-lg-3" data-aos="flip-left" data-aos-delay="100">
-                <div class="priority-box">
-                    <h3>02</h3>
-                    <h5>Jeunesse & Emploi</h5>
-                </div>
-            </div>
-
-            <div class="col-lg-3" data-aos="flip-left" data-aos-delay="200">
-                <div class="priority-box">
-                    <h3>03</h3>
-                    <h5>Santé Moderne</h5>
-                </div>
-            </div>
-
-            <div class="col-lg-3" data-aos="flip-left" data-aos-delay="300">
-                <div class="priority-box">
-                    <h3>04</h3>
-                    <h5>Transformation Numérique</h5>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- PROGRAMME -->
-
-<section class="py-5 bg-light">
-
-    <div class="container">
-
-        <div class="section-header text-center">
-            <span class="section-badge">PROGRAMME</span>
-            <h2>Les piliers de notre action</h2>
-        </div>
-
-        <div class="row g-4 mt-4">
-
-            <div class="col-lg-6">
-                <div class="vision-card">
-                    <h4>🏗️ Infrastructures</h4>
-                    <p>Routes, santé, écoles et services publics.</p>
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="vision-card">
-                    <h4>🌱 Agriculture</h4>
-                    <p>Valorisation des ressources locales.</p>
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="vision-card">
-                    <h4>💼 Entrepreneuriat</h4>
-                    <p>Soutien massif aux jeunes porteurs de projets.</p>
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="vision-card">
-                    <h4>⚡ Énergie</h4>
-                    <p>Accès universel à une énergie fiable.</p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- LEADERSHIP -->
-
-<section class="py-5">
-
-    <div class="container">
-
-        <div class="section-header text-center">
-            <span class="section-badge">LEADERSHIP</span>
-            <h2>Notre Leadership</h2>
-        </div>
-
-        <div class="row justify-content-center">
-
-            <div class="col-lg-4">
-
-                <div class="leader-card text-center">
-
-                    <img
-                        src="{% static 'images/president.jpg' %}"
-                        class="img-fluid rounded-circle mb-4"
-                        alt="Président">
-
-                    <h4>
-                        Président du Mouvement
-                    </h4>
-
-                    <p>
-                        Vision, engagement et leadership
-                        au service des territoires.
-                    </p>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ACTUALITES DYNAMIQUES -->
-
-<section class="latest-news py-5">
-
-    <div class="container">
-
-        <div class="section-header text-center">
-
-            <span class="section-badge">
-                ACTUALITÉS
-            </span>
-
-            <h2>
-                Dernières Actualités
-            </h2>
-
-        </div>
-
-        <div class="row mt-5">
-
-            {% for article in latest_news %}
-
-            <div class="col-lg-4 mb-4">
-
-                <div class="news-card">
-
-                    <img
-                        src="{{ article.image.url }}"
-                        alt="{{ article.title }}">
-
-                    <div class="p-4">
-
-                        <h5>
-                            {{ article.title }}
-                        </h5>
+                    <div class="hero-buttons">
 
                         <a
-                            href="{% url 'news_detail' article.id %}"
-                            class="btn btn-primary">
+                            href="{% url 'vision' %}"
+                            class="hero-btn hero-btn-primary">
 
-                            Lire l'article
+                            <i class="bi bi-compass-fill"></i>
+                            <span>Découvrir notre Vision</span>
+
+                        </a>
+
+                        <a
+                            href="{% url 'adhesion' %}"
+                            class="hero-btn hero-btn-secondary">
+
+                            <i class="bi bi-people-fill"></i>
+                            <span>Rejoindre le Mouvement</span>
 
                         </a>
 
@@ -421,13 +120,639 @@
 
             </div>
 
+            <!-- RIGHT LOGO -->
+
+            <div
+                class="col-lg-6 text-center"
+                data-aos="zoom-in">
+
+                <div class="hero-logo-wrapper">
+
+                    <div class="logo-glow"></div>
+
+                    <img
+                        src="{% static 'images/logo.png' %}"
+                        class="hero-logo"
+                        alt="AND NAWLE">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================================
+VISION
+========================================== -->
+
+<section id="vision" class="vision-section py-5">
+
+    <div class="container">
+
+        <div class="section-header text-center" data-aos="fade-up">
+
+            <span class="section-badge">
+                <i class="bi bi-eye-fill me-2"></i>
+                NOTRE VISION
+            </span>
+
+            <h2 class="section-title">
+                Un Sénégal fort dans l’unité de ses territoires
+            </h2>
+
+            <p class="section-subtitle">
+                Chaque citoyen mérite les mêmes opportunités,
+                quel que soit son territoire.
+            </p>
+
+        </div>
+
+        <div class="row g-4 mt-5">
+
+            <div class="col-lg-4" data-aos="fade-up">
+
+                <div class="vision-card h-100">
+
+                    <div class="vision-icon">
+                        <i class="bi bi-hospital"></i>
+                    </div>
+
+                    <h4>Santé</h4>
+
+                    <p>
+                        Accès équitable à des soins modernes
+                        et de qualité dans toutes les régions du Sénégal.
+                    </p>
+
+                    <a href="#" class="card-btn">
+                        Découvrir
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+
+                <div class="vision-card h-100">
+
+                    <div class="vision-icon">
+                        <i class="bi bi-mortarboard"></i>
+                    </div>
+
+                    <h4>Éducation</h4>
+
+                    <p>
+                        Former une jeunesse compétente,
+                        innovante et capable de relever les défis futurs.
+                    </p>
+
+                    <a href="#" class="card-btn">
+                        Découvrir
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+
+                <div class="vision-card h-100">
+
+                    <div class="vision-icon">
+                        <i class="bi bi-cpu"></i>
+                    </div>
+
+                    <h4>Numérique</h4>
+
+                    <p>
+                        Faire du numérique un puissant moteur
+                        de croissance, d’innovation et d’inclusion.
+                    </p>
+
+                    <a href="#" class="card-btn">
+                        Découvrir
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+VALEURS
+========================================== -->
+
+<section class="values-section py-5">
+
+    <div class="container">
+
+        <div class="section-header text-center" data-aos="fade-up">
+
+            <span class="section-badge">
+                <i class="bi bi-stars me-2"></i>
+                NOS VALEURS
+            </span>
+
+            <h2 class="section-title">
+                Pourquoi AND NAWLE ?
+            </h2>
+
+            <p class="section-subtitle">
+                Une approche centrée sur les territoires
+                et les citoyens.
+            </p>
+
+        </div>
+
+        <div class="row g-4 mt-5">
+
+            <div class="col-lg-4" data-aos="zoom-in">
+
+                <div class="vision-card h-100">
+
+                    <div class="vision-icon">
+                        <i class="bi bi-geo-alt"></i>
+                    </div>
+
+                    <h4>Territoires</h4>
+
+                    <p>
+                        Développement équilibré
+                        et harmonieux de toutes les régions.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+
+                <div class="vision-card h-100">
+
+                    <div class="vision-icon">
+                        <i class="bi bi-people"></i>
+                    </div>
+
+                    <h4>Citoyens</h4>
+
+                    <p>
+                        Participation active des populations
+                        dans les décisions publiques.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+
+                <div class="vision-card h-100">
+
+                    <div class="vision-icon">
+                        <i class="bi bi-bar-chart-line"></i>
+                    </div>
+
+                    <h4>Résultats</h4>
+
+                    <p>
+                        Des actions concrètes,
+                        mesurables et durables.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+PRIORITÉS
+========================================== -->
+
+<section class="priorities-section py-5">
+
+    <div class="container">
+
+        <div class="section-header text-center" data-aos="fade-up">
+
+            <span class="section-badge">
+                <i class="bi bi-flag-fill me-2"></i>
+                NOS PRIORITÉS
+            </span>
+
+            <h2 class="section-title">
+                Les grands chantiers du changement
+            </h2>
+
+        </div>
+
+        <div class="row g-4 mt-5">
+
+            <div class="col-lg-3" data-aos="flip-left">
+
+                <div class="priority-box">
+
+                    <span>01</span>
+
+                    <h5>
+                        Développement Territorial
+                    </h5>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3" data-aos="flip-left" data-aos-delay="100">
+
+                <div class="priority-box">
+
+                    <span>02</span>
+
+                    <h5>
+                        Jeunesse & Emploi
+                    </h5>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3" data-aos="flip-left" data-aos-delay="200">
+
+                <div class="priority-box">
+
+                    <span>03</span>
+
+                    <h5>
+                        Santé Moderne
+                    </h5>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-3" data-aos="flip-left" data-aos-delay="300">
+
+                <div class="priority-box">
+
+                    <span>04</span>
+
+                    <h5>
+                        Transformation Numérique
+                    </h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==========================================
+PROGRAMME
+========================================== -->
+
+<section class="programme-section py-5">
+
+    <div class="container">
+
+        <div class="section-header text-center" data-aos="fade-up">
+
+            <span class="section-badge">
+                <i class="bi bi-lightning-charge-fill me-2"></i>
+                PROGRAMME
+            </span>
+
+            <h2 class="section-title">
+                Les piliers de notre action
+            </h2>
+
+        </div>
+
+        <div class="row g-4 mt-5">
+
+            <div class="col-lg-6" data-aos="fade-right">
+
+                <div class="vision-card h-100">
+
+                    <h4>🏗️ Infrastructures</h4>
+
+                    <p>
+                        Routes, établissements de santé,
+                        écoles et services publics modernes.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left">
+
+                <div class="vision-card h-100">
+
+                    <h4>🌱 Agriculture</h4>
+
+                    <p>
+                        Valorisation des ressources locales
+                        et souveraineté alimentaire.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-right">
+
+                <div class="vision-card h-100">
+
+                    <h4>💼 Entrepreneuriat</h4>
+
+                    <p>
+                        Soutien massif aux jeunes
+                        porteurs de projets innovants.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left">
+
+                <div class="vision-card h-100">
+
+                    <h4>⚡ Énergie</h4>
+
+                    <p>
+                        Accès universel à une énergie
+                        durable, fiable et abordable.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==================================================
+LEADERSHIP PREMIUM ULTIMATE
+================================================== -->
+
+<section class="leadership-section py-5">
+
+    <div class="container">
+
+        <!-- SECTION HEADER -->
+
+        <div class="section-header text-center mb-5">
+
+            <span class="section-badge">
+                <i class="bi bi-award-fill"></i>
+                LEADERSHIP
+            </span>
+
+            <h2 class="section-title">
+                Notre Leadership
+            </h2>
+
+            <p class="section-subtitle">
+                Une vision ambitieuse portée par un leadership engagé,
+                proche des populations et au service du développement
+                durable des territoires.
+            </p>
+
+        </div>
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-5 col-md-8">
+
+                <div class="leader-card">
+
+                    <div class="leader-image-wrapper">
+
+                        <div class="leader-glow"></div>
+
+                        <img
+                            src="{% static 'images/president.jpg' %}"
+                            class="leader-image"
+                            alt="Président du Mouvement">
+
+                    </div>
+
+                    <div class="leader-content">
+
+                        <span class="leader-role">
+                            Président du Mouvement
+                        </span>
+
+                        <h3>
+                            Leadership & Vision
+                        </h3>
+
+                        <p>
+                            Porteur d'une vision moderne et inclusive,
+                            il œuvre pour le développement harmonieux
+                            des territoires à travers des actions
+                            concrètes, innovantes et durables.
+                        </p>
+
+                        <div class="leader-actions">
+
+                            <a href="#contact"
+                               class="btn btn-leader-primary">
+
+                                <i class="bi bi-chat-dots-fill"></i>
+                                Contacter
+
+                            </a>
+
+                            <a href="#vision"
+                               class="btn btn-leader-outline">
+
+                                <i class="bi bi-eye-fill"></i>
+                                Découvrir
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==================================================
+ACTUALITÉS PREMIUM ULTIMATE
+================================================== -->
+
+<section class="latest-news py-5">
+
+    <div class="container">
+
+        <!-- SECTION HEADER -->
+
+        <div class="section-header text-center mb-5">
+
+            <span class="section-badge">
+                <i class="bi bi-newspaper me-2"></i>
+                ACTUALITÉS
+            </span>
+
+            <h2 class="section-title mt-3">
+                Dernières Actualités
+            </h2>
+
+            <p class="section-subtitle">
+                Découvrez les dernières informations, annonces
+                et événements de notre organisation.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            {% for article in latest_news %}
+
+            <div class="col-lg-4 col-md-6">
+
+                <article class="news-card h-100">
+
+                    <!-- IMAGE -->
+
+                    <div class="news-image-wrapper">
+
+                        {% if article.cover_image %}
+
+                        <img
+                            src="{{ article.cover_image.url }}"
+                            alt="{{ article.title }}"
+                            class="news-image"
+                        >
+
+                        {% else %}
+
+                        <img
+                            src="https://via.placeholder.com/800x500?text=AND+NAWLE"
+                            alt="{{ article.title }}"
+                            class="news-image"
+                        >
+
+                        {% endif %}
+
+                        <div class="news-overlay"></div>
+
+                    </div>
+
+                    <!-- CONTENT -->
+
+                    <div class="news-content">
+
+                        <div class="news-icon">
+
+                            <i class="bi bi-megaphone-fill"></i>
+
+                        </div>
+
+                        <h5 class="news-title">
+
+                            {{ article.title }}
+
+                        </h5>
+
+                        {% if article.excerpt %}
+
+                        <p class="news-excerpt">
+
+                            {{ article.excerpt|truncatewords:20 }}
+
+                        </p>
+
+                        {% endif %}
+
+                        <div class="news-divider"></div>
+
+                        <div class="news-meta mb-3">
+
+                            <small class="text-muted">
+
+                                <i class="bi bi-calendar3 me-1"></i>
+
+                                {{ article.published_at|date:"d M Y" }}
+
+                            </small>
+
+                        </div>
+
+                        <a
+                            href="{% url 'news:news_detail' article.slug %}"
+                            class="btn-news"
+                        >
+
+                            <span>
+                                Lire l'article
+                            </span>
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
             {% empty %}
 
-            <div class="col-12 text-center">
+            <div class="col-12">
 
-                <p>
-                    Aucune actualité disponible pour le moment.
-                </p>
+                <div class="empty-news">
+
+                    <i class="bi bi-newspaper"></i>
+
+                    <h4>
+                        Aucune actualité disponible
+                    </h4>
+
+                    <p>
+                        Revenez prochainement pour découvrir nos
+                        nouvelles publications.
+                    </p>
+
+                </div>
 
             </div>
 
@@ -498,6 +823,82 @@
             Adhérer Maintenant
 
         </a>
+
+    </div>
+
+</section>
+
+<section class="stats-section">
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <h2 class="counter">
+                        15
+                    </h2>
+
+                    <p>
+                        Régions
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <h2 class="counter">
+                        46
+                    </h2>
+
+                    <p>
+                        Départements
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <h2 class="counter">
+                        557
+                    </h2>
+
+                    <p>
+                        Communes
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="stat-card">
+
+                    <h2 class="counter">
+                        12500
+                    </h2>
+
+                    <p>
+                        Adhérents
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 

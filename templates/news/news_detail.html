@@ -3,53 +3,1180 @@
 
 {% block content %}
 
+    <style>
+
+/* ==================================================
+
+   PRESIDENTIAL NEWS DETAIL - ULTIMATE PREMIUM 2026
+
+================================================== */
+
+
+
+:root{
+
+    --primary:#0b1e3a;
+
+    --secondary:#173f78;
+
+    --accent:#d4af37;
+
+    --light:#ffffff;
+
+    --text:#2d3748;
+
+    --muted:#64748b;
+
+
+
+    --shadow-sm:0 10px 30px rgba(0,0,0,.08);
+
+    --shadow-md:0 20px 50px rgba(0,0,0,.12);
+
+    --shadow-lg:0 30px 80px rgba(0,0,0,.15);
+
+
+
+    --radius-lg:30px;
+
+    --radius-md:22px;
+
+
+
+    --transition:.4s ease;
+
+}
+
+
+
+/* ==========================
+
+   PAGE
+
+========================== */
+
+
+
+.presidential-news-detail{
+
+    background:
+
+    radial-gradient(circle at top right,
+
+    rgba(23,63,120,.08),
+
+    transparent 35%),
+
+    #f7f9fc;
+
+
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+}
+
+
+
+/* ==========================
+
+   HERO SECTION
+
+========================== */
+
+
+
+.news-hero{
+
+    position:relative;
+
+    height:80vh;
+
+    min-height:650px;
+
+    overflow:hidden;
+
+}
+
+
+
+.hero-image,
+
+.hero-placeholder{
+
+    width:100%;
+
+    height:100%;
+
+}
+
+
+
+.hero-image{
+
+    object-fit:cover;
+
+    transform:scale(1.05);
+
+    transition:8s ease;
+
+}
+
+
+
+.news-hero:hover .hero-image{
+
+    transform:scale(1.12);
+
+}
+
+
+
+.hero-placeholder{
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        var(--primary),
+
+        var(--secondary)
+
+    );
+
+}
+
+
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+
+
+    background:
+
+    linear-gradient(
+
+        to bottom,
+
+        rgba(0,0,0,.15),
+
+        rgba(0,0,0,.80)
+
+    );
+
+}
+
+
+
+/* Light Effect */
+
+
+
+.hero-overlay::before{
+
+    content:'';
+
+    position:absolute;
+
+
+
+    width:500px;
+
+    height:500px;
+
+
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        rgba(255,255,255,.15),
+
+        transparent 70%
+
+    );
+
+
+
+    top:-200px;
+
+    right:-100px;
+
+
+
+    animation:floatGlow 10s ease-in-out infinite;
+
+}
+
+
+
+@keyframes floatGlow{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(30px);
+
+    }
+
+}
+
+
+
+/* ==========================
+
+   HERO CONTENT
+
+========================== */
+
+
+
+.hero-content{
+
+    position:absolute;
+
+    bottom:90px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:10;
+
+    color:white;
+
+
+
+    animation:fadeUp 1s ease;
+
+}
+
+
+
+@keyframes fadeUp{
+
+
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+        translateX(-50%)
+
+        translateY(40px);
+
+    }
+
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+        translateX(-50%)
+
+        translateY(0);
+
+    }
+
+}
+
+
+
+.hero-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+
+
+    padding:12px 28px;
+
+
+
+    background:
+
+    rgba(255,255,255,.12);
+
+
+
+    backdrop-filter:blur(20px);
+
+
+
+    border:
+
+    1px solid rgba(255,255,255,.25);
+
+
+
+    border-radius:60px;
+
+
+
+    color:white;
+
+
+
+    font-weight:700;
+
+    letter-spacing:1px;
+
+
+
+    margin-bottom:25px;
+
+
+
+    box-shadow:
+
+    0 8px 25px rgba(0,0,0,.15);
+
+}
+
+
+
+.hero-title{
+
+    font-size:3.5rem;
+
+    font-weight:900;
+
+    line-height:1.15;
+
+
+
+    max-width:1000px;
+
+
+
+    margin-bottom:25px;
+
+
+
+    text-shadow:
+
+    0 10px 35px rgba(0,0,0,.4);
+
+}
+
+
+
+.hero-meta{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+}
+
+
+
+.hero-meta span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+
+
+    font-weight:500;
+
+
+
+    background:
+
+    rgba(255,255,255,.08);
+
+
+
+    backdrop-filter:blur(10px);
+
+
+
+    padding:10px 18px;
+
+
+
+    border-radius:50px;
+
+}
+
+
+
+/* ==========================
+
+   CONTENT WRAPPER
+
+========================== */
+
+
+
+.content-wrapper{
+
+    position:relative;
+
+    z-index:20;
+
+
+
+    margin-top:-120px;
+
+    padding-bottom:120px;
+
+}
+
+
+
+/* ==========================
+
+   ARTICLE CARD
+
+========================== */
+
+
+
+.article-card{
+
+    background:white;
+
+
+
+    border-radius:35px;
+
+
+
+    overflow:hidden;
+
+
+
+    box-shadow:
+
+    0 35px 90px rgba(0,0,0,.08);
+
+
+
+    transition:var(--transition);
+
+}
+
+
+
+.article-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+
+
+/* ==========================
+
+   FEATURED IMAGE
+
+========================== */
+
+
+
+.featured-image-wrapper{
+
+    padding:35px;
+
+}
+
+
+
+.featured-image{
+
+    width:100%;
+
+    display:block;
+
+
+
+    border-radius:25px;
+
+
+
+    transition:.6s ease;
+
+
+
+    box-shadow:
+
+    var(--shadow-lg);
+
+}
+
+
+
+.featured-image:hover{
+
+    transform:scale(1.02);
+
+}
+
+
+
+/* ==========================
+
+   VIDEO
+
+========================== */
+
+
+
+.video-wrapper{
+
+    padding:0 35px 35px;
+
+}
+
+
+
+.article-video{
+
+    width:100%;
+
+
+
+    border-radius:25px;
+
+
+
+    overflow:hidden;
+
+
+
+    box-shadow:
+
+    var(--shadow-lg);
+
+
+
+    transition:.4s;
+
+}
+
+
+
+.article-video:hover{
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* ==========================
+
+   ARTICLE CONTENT
+
+========================== */
+
+
+
+.article-body{
+
+    padding:20px 70px 70px;
+
+
+
+    color:var(--text);
+
+
+
+    font-size:1.12rem;
+
+
+
+    line-height:2;
+
+}
+
+
+
+.article-body p{
+
+    margin-bottom:30px;
+
+}
+
+
+
+.article-body h2,
+
+.article-body h3,
+
+.article-body h4{
+
+    color:var(--primary);
+
+    margin-top:35px;
+
+    margin-bottom:20px;
+
+    font-weight:800;
+
+}
+
+
+
+.article-body blockquote{
+
+    background:#f8fafc;
+
+
+
+    border-left:5px solid var(--accent);
+
+
+
+    padding:25px;
+
+
+
+    border-radius:15px;
+
+
+
+    margin:30px 0;
+
+
+
+    font-style:italic;
+
+}
+
+
+
+/* ==========================
+
+   DOCUMENT SECTION
+
+========================== */
+
+
+
+.document-section{
+
+    padding:0 40px 60px;
+
+}
+
+
+
+.document-card{
+
+    position:relative;
+
+
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        var(--primary),
+
+        var(--secondary)
+
+    );
+
+
+
+    border-radius:30px;
+
+
+
+    padding:40px;
+
+
+
+    color:white;
+
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    flex-wrap:wrap;
+
+
+
+    gap:30px;
+
+
+
+    overflow:hidden;
+
+}
+
+
+
+.document-card::before{
+
+    content:'';
+
+
+
+    position:absolute;
+
+
+
+    width:300px;
+
+    height:300px;
+
+
+
+    border-radius:50%;
+
+
+
+    background:
+
+    rgba(255,255,255,.05);
+
+
+
+    top:-100px;
+
+    right:-80px;
+
+}
+
+
+
+.document-icon{
+
+    font-size:3.5rem;
+
+}
+
+
+
+.document-info h5{
+
+    font-weight:800;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.document-info p{
+
+    margin:0;
+
+    opacity:.9;
+
+}
+
+
+
+/* ==========================
+
+   DOWNLOAD BUTTON
+
+========================== */
+
+
+
+.download-btn{
+
+    position:relative;
+
+
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+
+
+    background:white;
+
+    color:var(--primary);
+
+
+
+    text-decoration:none;
+
+
+
+    padding:16px 34px;
+
+
+
+    border-radius:60px;
+
+
+
+    font-weight:800;
+
+
+
+    transition:.4s ease;
+
+
+
+    overflow:hidden;
+
+
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.15);
+
+}
+
+
+
+.download-btn::before{
+
+    content:'';
+
+
+
+    position:absolute;
+
+
+
+    top:0;
+
+    left:-100%;
+
+
+
+    width:100%;
+
+    height:100%;
+
+
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.7),
+
+        transparent
+
+    );
+
+
+
+    transition:.7s;
+
+}
+
+
+
+.download-btn:hover::before{
+
+    left:100%;
+
+}
+
+
+
+.download-btn:hover{
+
+    transform:
+
+    translateY(-5px)
+
+    scale(1.04);
+
+
+
+    color:var(--primary);
+
+
+
+    box-shadow:
+
+    0 15px 40px rgba(0,0,0,.25);
+
+}
+
+
+
+/* ==========================
+
+   RESPONSIVE
+
+========================== */
+
+
+
+@media(max-width:1200px){
+
+
+
+    .hero-title{
+
+        font-size:3rem;
+
+    }
+
+
+
+}
+
+
+
+@media(max-width:991px){
+
+
+
+    .hero-title{
+
+        font-size:2.4rem;
+
+    }
+
+
+
+    .article-body{
+
+        padding:35px;
+
+    }
+
+
+
+    .content-wrapper{
+
+        margin-top:-80px;
+
+    }
+
+
+
+}
+
+
+
+@media(max-width:768px){
+
+
+
+    .news-hero{
+
+        height:65vh;
+
+        min-height:500px;
+
+    }
+
+
+
+    .hero-content{
+
+        bottom:50px;
+
+    }
+
+
+
+    .hero-title{
+
+        font-size:1.9rem;
+
+    }
+
+
+
+    .hero-meta{
+
+        gap:12px;
+
+    }
+
+
+
+    .hero-meta span{
+
+        font-size:.9rem;
+
+    }
+
+
+
+    .featured-image-wrapper,
+
+    .video-wrapper{
+
+        padding:20px;
+
+    }
+
+
+
+    .article-body{
+
+        padding:25px;
+
+        font-size:1rem;
+
+        line-height:1.9;
+
+    }
+
+
+
+    .document-card{
+
+        text-align:center;
+
+        justify-content:center;
+
+        padding:30px;
+
+    }
+
+
+
+    .download-btn{
+
+        width:100%;
+
+        justify-content:center;
+
+    }
+
+
+
+}
+
+
+
+@media(max-width:576px){
+
+
+
+    .hero-title{
+
+        font-size:1.6rem;
+
+    }
+
+
+
+    .hero-badge{
+
+        font-size:.85rem;
+
+    }
+
+
+
+    .article-card{
+
+        border-radius:22px;
+
+    }
+}
+</style>
+
+
 <section class="presidential-news-detail">
 
     <!-- HERO MEDIA -->
-
     <div class="news-hero">
 
         {% if article.cover_image %}
-
-        <img
-            src="{{ article.cover_image.url }}"
-            alt="{{ article.title }}"
-            class="hero-image"
-        >
-
+            <img
+                src="{{ article.cover_image.url }}"
+                alt="{{ article.title }}"
+                class="hero-image"
+            >
         {% else %}
-
-        <div class="hero-placeholder"></div>
-
+            <div class="hero-placeholder"></div>
         {% endif %}
 
+        <!-- Overlay -->
         <div class="hero-overlay"></div>
 
+        <!-- Effets lumineux -->
+        <div class="hero-shape hero-shape-1"></div>
+        <div class="hero-shape hero-shape-2"></div>
+
+        <!-- Contenu -->
         <div class="hero-content container">
 
             <span class="hero-badge">
-
+                <i class="bi bi-megaphone-fill"></i>
                 COMMUNIQUÉ OFFICIEL
-
             </span>
 
             <h1 class="hero-title">
-
                 {{ article.title }}
-
             </h1>
 
             <div class="hero-meta">
 
-                <span>
-                    <i class="bi bi-calendar-event"></i>
+                <span class="meta-item">
+                    <i class="bi bi-calendar-event-fill"></i>
                     {{ article.published_at|date:"d F Y" }}
                 </span>
 
-                <span>
-                    <i class="bi bi-clock"></i>
+                <span class="meta-item">
+                    <i class="bi bi-clock-fill"></i>
                     {{ article.published_at|date:"H:i" }}
                 </span>
+
+            </div>
+
+            <div class="hero-actions">
+
+                <a href="#article-content" class="btn-read">
+                    <i class="bi bi-book-fill"></i>
+                    Lire l&rsquo;article
+                </a>
+
+                <a href="{% url 'news:news_list' %}" class="btn-back">
+                    <i class="bi bi-arrow-left-circle-fill"></i>
+                    Retour aux actualités
+                </a>
 
             </div>
 
@@ -57,7 +1184,9 @@
 
     </div>
 
-    <!-- CONTENU -->
+</section>
+
+<section class="article-detail-section">
 
     <div class="container">
 
@@ -65,10 +1194,7 @@
 
             <div class="article-card">
 
-                <!-- IMAGE PRINCIPALE -->
-
                 {% if article.cover_image %}
-
                 <div class="featured-image-wrapper">
 
                     <img
@@ -78,13 +1204,9 @@
                     >
 
                 </div>
-
                 {% endif %}
 
-                <!-- VIDEO -->
-
                 {% if article.video %}
-
                 <div class="video-wrapper">
 
                     <video
@@ -92,40 +1214,34 @@
                         preload="metadata"
                         class="article-video"
                     >
-                        <source src="{{ article.video.url }}">
+                        <source
+                            src="{{ article.video.url }}"
+                            type="video/mp4"
+                        >
+                        Votre navigateur ne prend pas en charge la lecture vidéo.
                     </video>
 
                 </div>
-
                 {% endif %}
 
-                <!-- TEXTE -->
-
-                <div class="article-body">
+                <div id="article-content" class="article-body">
 
                     {{ article.content|linebreaks }}
 
                 </div>
 
-                <!-- DOCUMENT -->
-
                 {% if article.document %}
-
                 <div class="document-section">
 
                     <div class="document-card">
 
                         <div class="document-icon">
-
                             <i class="bi bi-file-earmark-pdf-fill"></i>
-
                         </div>
 
                         <div class="document-info">
 
-                            <h5>
-                                Document Officiel
-                            </h5>
+                            <h5>Document Officiel</h5>
 
                             <p>
                                 Télécharger le document associé à cette publication.
@@ -138,13 +1254,13 @@
                             target="_blank"
                             class="download-btn"
                         >
+                            <i class="bi bi-download me-2"></i>
                             Télécharger
                         </a>
 
                     </div>
 
                 </div>
-
                 {% endif %}
 
             </div>
@@ -154,248 +1270,5 @@
     </div>
 
 </section>
-
-<style>
-
-/* ==========================
-   PRESIDENTIAL NEWS DETAIL
-========================== */
-
-.presidential-news-detail{
-    background:#f7f9fc;
-    min-height:100vh;
-}
-
-/* HERO */
-
-.news-hero{
-    position:relative;
-    height:75vh;
-    min-height:600px;
-    overflow:hidden;
-}
-
-.hero-image{
-    width:100%;
-    height:100%;
-    object-fit:cover;
-}
-
-.hero-placeholder{
-    width:100%;
-    height:100%;
-    background:linear-gradient(
-        135deg,
-        #0b1e3a,
-        #173f78
-    );
-}
-
-.hero-overlay{
-    position:absolute;
-    inset:0;
-    background:
-    linear-gradient(
-        rgba(0,0,0,.15),
-        rgba(0,0,0,.75)
-    );
-}
-
-.hero-content{
-    position:absolute;
-    bottom:80px;
-    left:50%;
-    transform:translateX(-50%);
-    color:white;
-    z-index:10;
-}
-
-.hero-badge{
-    display:inline-block;
-    background:rgba(255,255,255,.15);
-    backdrop-filter:blur(15px);
-    border:1px solid rgba(255,255,255,.2);
-    color:white;
-    padding:10px 22px;
-    border-radius:50px;
-    margin-bottom:25px;
-    font-weight:700;
-    letter-spacing:1px;
-}
-
-.hero-title{
-    font-size:3.2rem;
-    font-weight:800;
-    line-height:1.2;
-    max-width:1000px;
-    margin-bottom:25px;
-    text-shadow:0 5px 20px rgba(0,0,0,.4);
-}
-
-.hero-meta{
-    display:flex;
-    gap:30px;
-    flex-wrap:wrap;
-    font-size:1rem;
-}
-
-.hero-meta span{
-    display:flex;
-    align-items:center;
-    gap:8px;
-    opacity:.95;
-}
-
-/* CONTENT */
-
-.content-wrapper{
-    margin-top:-100px;
-    position:relative;
-    z-index:20;
-    padding-bottom:100px;
-}
-
-.article-card{
-    background:white;
-    border-radius:30px;
-    overflow:hidden;
-    box-shadow:
-    0 30px 80px rgba(0,0,0,.08);
-}
-
-/* IMAGE */
-
-.featured-image-wrapper{
-    padding:30px;
-}
-
-.featured-image{
-    width:100%;
-    border-radius:25px;
-    display:block;
-    box-shadow:
-    0 20px 50px rgba(0,0,0,.15);
-}
-
-/* VIDEO */
-
-.video-wrapper{
-    padding:0 30px 30px;
-}
-
-.article-video{
-    width:100%;
-    border-radius:25px;
-    overflow:hidden;
-    box-shadow:
-    0 20px 50px rgba(0,0,0,.15);
-}
-
-/* ARTICLE */
-
-.article-body{
-    padding:20px 60px 60px;
-    font-size:1.15rem;
-    line-height:2;
-    color:#2d3748;
-}
-
-.article-body p{
-    margin-bottom:25px;
-}
-
-/* DOCUMENT */
-
-.document-section{
-    padding:0 40px 50px;
-}
-
-.document-card{
-    background:linear-gradient(
-        135deg,
-        #0b1e3a,
-        #173f78
-    );
-    color:white;
-    border-radius:25px;
-    padding:35px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:25px;
-    flex-wrap:wrap;
-}
-
-.document-icon{
-    font-size:3rem;
-}
-
-.document-info h5{
-    font-weight:700;
-    margin-bottom:8px;
-}
-
-.document-info p{
-    margin:0;
-    opacity:.9;
-}
-
-.download-btn{
-    background:white;
-    color:#0b1e3a;
-    text-decoration:none;
-    padding:14px 30px;
-    border-radius:50px;
-    font-weight:700;
-    transition:.3s;
-}
-
-.download-btn:hover{
-    transform:translateY(-3px);
-    color:#0b1e3a;
-}
-
-/* RESPONSIVE */
-
-@media(max-width:991px){
-
-    .hero-title{
-        font-size:2.3rem;
-    }
-
-    .article-body{
-        padding:30px;
-    }
-
-}
-
-@media(max-width:768px){
-
-    .news-hero{
-        height:65vh;
-        min-height:500px;
-    }
-
-    .hero-title{
-        font-size:1.9rem;
-    }
-
-    .hero-content{
-        bottom:50px;
-    }
-
-    .article-body{
-        font-size:1rem;
-        line-height:1.9;
-    }
-
-    .document-card{
-        text-align:center;
-        justify-content:center;
-    }
-
-}
-
-</style>
 
 {% endblock %}

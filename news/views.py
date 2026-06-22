@@ -1,42 +1,35 @@
-from django.shortcuts import get_object_or_404
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 
 from .models import News
 
 
 def news_list(request):
 
-    news = News.objects.filter(
-        is_active=True
-    ).order_by(
-        "-published_at"
+    news_list = News.objects.filter(
+        is_published=True
     )
-
-    context = {
-        "news_list": news
-    }
 
     return render(
         request,
         "news/news_list.html",
-        context
+        {
+            "news_list": news_list
+        }
     )
 
 
-def news_detail(request, pk):
+def news_detail(request, slug):
 
     article = get_object_or_404(
         News,
-        pk=pk,
-        is_active=True
+        slug=slug,
+        is_published=True
     )
-
-    context = {
-        "article": article
-    }
 
     return render(
         request,
         "news/news_detail.html",
-        context
+        {
+            "article": article
+        }
     )

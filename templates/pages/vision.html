@@ -7,73 +7,90 @@
 
 {% block content %}
 
-<!-- HERO PRESIDENTIEL PREMIUM -->
+{% load static %}
+
+<!-- =========================================
+HERO PRESIDENTIEL ULTIMATE PREMIUM
+========================================= -->
 
 <section class="vision-hero">
 
-<div class="hero-particles"></div>
+    <div class="hero-particles"></div>
+    <div class="vision-overlay"></div>
 
-<div class="vision-overlay"></div>
+    <div class="container position-relative">
 
-<div class="container position-relative">
+        <div class="row align-items-center min-vh-100">
 
-    <div class="row align-items-center min-vh-100">
+            <!-- TEXTE -->
 
-        <div class="col-lg-7">
+            <div class="col-lg-7">
 
-            <span class="vision-badge">
-                🇸🇳 AND NAWLE • VISION NATIONALE 2050
-            </span>
+                <span class="vision-badge">
+                    🇸🇳 AND NAWLE • VISION NATIONALE 2050
+                </span>
 
-            <h1 class="vision-title">
-                Bâtir un Sénégal<br>
-                Souverain, Innovant,<br>
-                Prospère et Respecté
-            </h1>
+                <h1 class="vision-title">
+                    Bâtir un Sénégal<br>
+                    Souverain, Innovant,<br>
+                    Prospère et Respecté
+                </h1>
 
-            <p class="vision-subtitle">
-                Une vision ambitieuse portée par le leadership,
-                l'excellence, la justice sociale et la transformation
-                durable de notre nation pour les générations présentes
-                et futures.
-            </p>
+                <p class="vision-subtitle">
+                    Une vision ambitieuse portée par le leadership,
+                    l'excellence, la justice sociale et la transformation
+                    durable de notre nation pour les générations présentes
+                    et futures.
+                </p>
 
-            <blockquote class="president-quote">
-                « Le destin du Sénégal ne doit être limité ni par
-                nos difficultés présentes ni par nos peurs.
-                Il doit être guidé par notre courage,
-                notre travail et notre ambition collective. »
-            </blockquote>
+                <blockquote class="president-quote">
 
-            <div class="hero-buttons mt-5">
+                    <i class="bi bi-quote quote-icon"></i>
 
-                <a href="{% url 'adhesion' %}"
-                   class="btn btn-gold btn-lg">
+                    Le destin du Sénégal ne doit être limité ni par
+                    nos difficultés présentes ni par nos peurs.
+                    Il doit être guidé par notre courage,
+                    notre travail et notre ambition collective.
 
-                    Rejoindre le Mouvement
+                </blockquote>
 
-                </a>
+                <div class="hero-buttons">
 
-                <a href="#vision2050"
-                   class="btn btn-outline-light btn-lg">
+                    <a href="{% url 'adhesion' %}"
+                       class="btn btn-gold">
 
-                    Découvrir la Vision
+                        <i class="bi bi-people-fill"></i>
+                        Rejoindre le Mouvement
 
-                </a>
+                    </a>
+
+                    <a href="#vision2050"
+                       class="btn btn-light-soft">
+
+                        <i class="bi bi-arrow-down-circle"></i>
+                        Découvrir la Vision
+
+                    </a>
+
+                </div>
 
             </div>
 
-        </div>
+            <!-- PHOTO -->
 
-        <div class="col-lg-5 text-center">
+            <div class="col-lg-5 text-center">
 
-            <div class="president-frame">
+                <div class="president-frame">
 
-                <img
-                    src="{% static 'images/president2.jpg' %}"
-                    alt="Président du Mouvement AND NAWLE"
-                    class="president-photo"
-                >
+                    <div class="president-glow"></div>
+
+                    <img
+                        src="{% static 'images/president2.jpg' %}"
+                        alt="Président du Mouvement AND NAWLE"
+                        class="president-photo"
+                    >
+
+                </div>
 
             </div>
 
@@ -81,11 +98,11 @@
 
     </div>
 
-</div>
-
 </section>
 
-<!-- MESSAGE DU PRESIDENT -->
+<!-- =====================================================
+MESSAGE DU PRÉSIDENT - ULTIMATE PREMIUM
+===================================================== -->
 
 <section class="president-message">
 
@@ -93,38 +110,85 @@
 
         <div class="section-header">
 
-            <span>MESSAGE DU PRÉSIDENT</span>
+            <span class="section-badge">
+                <i class="bi bi-award-fill"></i>
+                MESSAGE DU PRÉSIDENT
+            </span>
 
             <h2>
-                Servir le Sénégal, Préparer l'Avenir
+                Servir le Sénégal,
+                <span>Préparer l'Avenir</span>
             </h2>
+
+            <p class="section-subtitle">
+                Une vision ambitieuse pour bâtir un Sénégal plus fort,
+                plus inclusif et plus prospère pour les générations futures.
+            </p>
 
         </div>
 
-        <div class="message-content">
+        <div class="message-card">
 
-            <p>
-                Chers compatriotes,
-            </p>
+            <div class="quote-icon">
+                <i class="bi bi-quote"></i>
+            </div>
 
-            <p>
-                Notre génération porte une responsabilité historique :
-                celle de construire un Sénégal plus juste,
-                plus compétitif et plus influent sur la scène africaine
-                et internationale.
-            </p>
+            <div class="message-content">
 
-            <p>
-                Notre engagement repose sur une conviction simple :
-                aucun territoire ne doit être oublié,
-                aucun citoyen ne doit être laissé derrière.
-            </p>
+                <p class="intro">
+                    Chers compatriotes,
+                </p>
 
-            <p>
-                Ensemble, nous pouvons faire émerger une nation
-                moderne capable de transformer son potentiel
-                en prospérité durable.
-            </p>
+                <p>
+                    Notre génération porte une responsabilité historique :
+                    celle de construire un Sénégal plus juste,
+                    plus compétitif et plus influent sur la scène africaine
+                    et internationale.
+                </p>
+
+                <p>
+                    Notre engagement repose sur une conviction simple :
+                    aucun territoire ne doit être oublié,
+                    aucun citoyen ne doit être laissé derrière.
+                </p>
+
+                <p>
+                    Ensemble, nous pouvons faire émerger une nation
+                    moderne capable de transformer son potentiel
+                    en prospérité durable.
+                </p>
+
+                <div class="signature">
+
+                    <h4>Le Président</h4>
+
+                    <span>
+                        La Marche des Territoires
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="message-actions">
+
+            <a href="#vision" class="btn-primary-custom">
+
+                <i class="bi bi-arrow-right-circle-fill"></i>
+
+                Découvrir notre vision
+
+            </a>
+
+            <a href="#contact" class="btn-secondary-custom">
+
+                <i class="bi bi-envelope-fill"></i>
+
+                Nous contacter
+
+            </a>
 
         </div>
 
@@ -132,55 +196,162 @@
 
 </section>
 
-<!-- FEUILLE DE ROUTE -->
+<!-- =========================================
+FEUILLE DE ROUTE - VERSION ULTIME PREMIUM
+========================================= -->
 
 <section class="roadmap-section" id="vision2050">
 
     <div class="container">
 
+        <!-- HEADER -->
+
         <div class="section-header text-center">
 
-            <span>FEUILLE DE ROUTE</span>
+            <span class="section-badge">
+                Vision Sénégal 2050
+            </span>
 
-            <h2>Le Sénégal de Demain se Construit Aujourd'hui</h2>
+            <h2>
+                Le Sénégal de Demain se Construit Aujourd'hui
+            </h2>
+
+            <p>
+                Une feuille de route ambitieuse pour bâtir
+                un Sénégal moderne, souverain, innovant
+                et prospère pour les générations futures.
+            </p>
 
         </div>
 
+        <!-- TIMELINE -->
+
         <div class="roadmap">
 
-            <div class="roadmap-item">
-                <span>2025</span>
-                <h4>Réformes Structurelles</h4>
-                <p>
-                    Modernisation des institutions et
-                    renforcement de la gouvernance.
-                </p>
-            </div>
+            <div class="roadmap-line"></div>
+
+            <!-- 2025 -->
 
             <div class="roadmap-item">
-                <span>2030</span>
-                <h4>Transformation Économique</h4>
-                <p>
-                    Industrialisation et création massive
-                    d'emplois.
-                </p>
+
+                <div class="roadmap-year">
+                    2025
+                </div>
+
+                <div class="roadmap-card">
+
+                    <div class="roadmap-icon">
+                        <i class="bi bi-building-gear"></i>
+                    </div>
+
+                    <h4>Réformes Structurelles</h4>
+
+                    <p>
+                        Modernisation des institutions,
+                        digitalisation des services publics
+                        et renforcement de la gouvernance.
+                    </p>
+
+                    <a href="#" class="roadmap-btn">
+                        Découvrir
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
             </div>
 
-            <div class="roadmap-item">
-                <span>2040</span>
-                <h4>Leadership Africain</h4>
-                <p>
-                    Positionner le Sénégal comme référence
-                    continentale.
-                </p>
-            </div>
+            <!-- 2030 -->
 
             <div class="roadmap-item">
-                <span>2050</span>
-                <h4>Émergence Totale</h4>
-                <p>
-                    Une nation moderne, souveraine et prospère.
-                </p>
+
+                <div class="roadmap-year">
+                    2030
+                </div>
+
+                <div class="roadmap-card">
+
+                    <div class="roadmap-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
+                    <h4>Transformation Économique</h4>
+
+                    <p>
+                        Industrialisation, innovation,
+                        infrastructures modernes et création
+                        massive d'emplois durables.
+                    </p>
+
+                    <a href="#" class="roadmap-btn">
+                        Découvrir
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- 2040 -->
+
+            <div class="roadmap-item">
+
+                <div class="roadmap-year">
+                    2040
+                </div>
+
+                <div class="roadmap-card">
+
+                    <div class="roadmap-icon">
+                        <i class="bi bi-globe-africa"></i>
+                    </div>
+
+                    <h4>Leadership Africain</h4>
+
+                    <p>
+                        Faire du Sénégal une référence
+                        continentale dans l'innovation,
+                        l'éducation et la compétitivité.
+                    </p>
+
+                    <a href="#" class="roadmap-btn">
+                        Découvrir
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- 2050 -->
+
+            <div class="roadmap-item">
+
+                <div class="roadmap-year">
+                    2050
+                </div>
+
+                <div class="roadmap-card roadmap-card-featured">
+
+                    <div class="roadmap-icon">
+                        <i class="bi bi-stars"></i>
+                    </div>
+
+                    <h4>Émergence Totale</h4>
+
+                    <p>
+                        Une nation moderne, souveraine,
+                        prospère, technologiquement avancée
+                        et tournée vers l'avenir.
+                    </p>
+
+                    <a href="#" class="roadmap-btn">
+                        Vision 2050
+                        <i class="bi bi-arrow-right"></i>
+                    </a>
+
+                </div>
+
             </div>
 
         </div>
@@ -189,7 +360,263 @@
 
 </section>
 
-<!-- PILIERS DE LA VISION -->
+<style>
+
+/* =========================================
+ROADMAP ULTIMATE PREMIUM
+========================================= */
+
+.roadmap-section{
+    position:relative;
+    padding:120px 0;
+    background:
+    linear-gradient(
+    135deg,
+    #f8fafc 0%,
+    #eef4ff 50%,
+    #ffffff 100%);
+    overflow:hidden;
+}
+
+/* Background Effects */
+
+.roadmap-section::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:
+    radial-gradient(
+    rgba(37,99,235,.12),
+    transparent 70%);
+    top:-200px;
+    left:-200px;
+}
+
+.roadmap-section::after{
+    content:"";
+    position:absolute;
+    width:400px;
+    height:400px;
+    border-radius:50%;
+    background:
+    radial-gradient(
+    rgba(16,185,129,.10),
+    transparent 70%);
+    bottom:-150px;
+    right:-150px;
+}
+
+/* HEADER */
+
+.section-header{
+    max-width:850px;
+    margin:auto;
+    margin-bottom:90px;
+    position:relative;
+    z-index:2;
+}
+
+.section-badge{
+    display:inline-block;
+    padding:12px 26px;
+    border-radius:50px;
+    background:rgba(37,99,235,.08);
+    color:#2563eb;
+    font-weight:700;
+    font-size:.9rem;
+    margin-bottom:20px;
+}
+
+.section-header h2{
+    font-size:3rem;
+    font-weight:800;
+    color:#0f172a;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.section-header p{
+    color:#64748b;
+    font-size:1.1rem;
+}
+
+/* TIMELINE */
+
+.roadmap{
+    position:relative;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:35px;
+    z-index:2;
+}
+
+.roadmap-line{
+    position:absolute;
+    top:45px;
+    left:10%;
+    width:80%;
+    height:4px;
+    background:
+    linear-gradient(
+    90deg,
+    #2563eb,
+    #10b981);
+    border-radius:50px;
+}
+
+/* ITEM */
+
+.roadmap-item{
+    position:relative;
+    text-align:center;
+}
+
+.roadmap-year{
+    width:90px;
+    height:90px;
+    margin:auto;
+    border-radius:50%;
+    background:
+    linear-gradient(
+    135deg,
+    #2563eb,
+    #10b981);
+    color:white;
+    font-size:1.3rem;
+    font-weight:800;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:
+    0 20px 40px rgba(37,99,235,.25);
+    position:relative;
+    z-index:5;
+    animation:pulseYear 4s infinite;
+}
+
+@keyframes pulseYear{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.05);
+    }
+}
+
+/* CARD */
+
+.roadmap-card{
+    margin-top:35px;
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.6);
+    border-radius:28px;
+    padding:35px 28px;
+    transition:.5s;
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.06);
+}
+
+.roadmap-card:hover{
+    transform:translateY(-12px);
+    box-shadow:
+    0 25px 60px rgba(37,99,235,.15);
+}
+
+.roadmap-card-featured{
+    border:2px solid rgba(37,99,235,.2);
+}
+
+.roadmap-icon{
+    width:75px;
+    height:75px;
+    margin:auto;
+    margin-bottom:20px;
+    border-radius:20px;
+    background:
+    linear-gradient(
+    135deg,
+    #2563eb,
+    #10b981);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:white;
+    font-size:2rem;
+}
+
+.roadmap-card h4{
+    font-weight:800;
+    color:#0f172a;
+    margin-bottom:15px;
+}
+
+.roadmap-card p{
+    color:#64748b;
+    line-height:1.8;
+}
+
+/* BUTTON */
+
+.roadmap-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    margin-top:20px;
+    padding:12px 24px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:700;
+    color:white;
+    background:
+    linear-gradient(
+    135deg,
+    #2563eb,
+    #10b981);
+    transition:.4s;
+}
+
+.roadmap-btn:hover{
+    color:white;
+    transform:translateY(-3px);
+    box-shadow:
+    0 15px 30px rgba(37,99,235,.25);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:991px){
+
+    .roadmap{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .roadmap-line{
+        display:none;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .section-header h2{
+        font-size:2rem;
+    }
+
+    .roadmap{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+}
+
+</style>
+
+<!-- =========================================
+VISION 2050 ULTIMATE PREMIUM
+========================================== -->
 
 <section class="vision-2050">
 
@@ -197,7 +624,9 @@
 
         <div class="section-header text-center">
 
-            <span>VISION 2050</span>
+            <span class="section-badge">
+                VISION 2050
+            </span>
 
             <h2>
                 Les Fondements de la Transformation Nationale
@@ -205,55 +634,100 @@
 
             <p>
                 Une stratégie ambitieuse fondée sur quatre piliers
-                essentiels pour l'avenir du Sénégal.
+                essentiels pour bâtir un Sénégal moderne,
+                prospère et souverain.
             </p>
 
         </div>
 
         <div class="row g-4">
 
+            <!-- Gouvernance -->
+
             <div class="col-lg-3 col-md-6">
+
                 <div class="pillar-card">
+
+                    <div class="pillar-icon">
+                        <i class="bi bi-building"></i>
+                    </div>
+
                     <h3>Gouvernance</h3>
+
                     <p>
                         Une administration moderne,
                         transparente, efficace
                         et orientée résultats.
                     </p>
+
                 </div>
+
             </div>
 
+            <!-- Economie -->
+
             <div class="col-lg-3 col-md-6">
+
                 <div class="pillar-card">
+
+                    <div class="pillar-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+
                     <h3>Économie</h3>
+
                     <p>
                         Une croissance inclusive,
                         créatrice d'emplois durables
                         et de richesses partagées.
                     </p>
+
                 </div>
+
             </div>
 
+            <!-- Capital Humain -->
+
             <div class="col-lg-3 col-md-6">
+
                 <div class="pillar-card">
+
+                    <div class="pillar-icon">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+
                     <h3>Capital Humain</h3>
+
                     <p>
                         Une jeunesse qualifiée,
                         innovante et compétitive
                         à l'échelle internationale.
                     </p>
+
                 </div>
+
             </div>
 
+            <!-- Souveraineté -->
+
             <div class="col-lg-3 col-md-6">
+
                 <div class="pillar-card">
+
+                    <div class="pillar-icon">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+
                     <h3>Souveraineté</h3>
+
                     <p>
                         Une nation forte capable
                         de défendre ses intérêts
                         stratégiques.
                     </p>
+
                 </div>
+
             </div>
 
         </div>
@@ -262,40 +736,62 @@
 
 </section>
 
-<!-- CHIFFRES CLES -->
+<!-- =========================================
+STATISTIQUES
+========================================== -->
 
 <section class="vision-stats">
 
     <div class="container">
 
-        <div class="row text-center">
+        <div class="row g-4">
 
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6">
+
                 <div class="stat-box">
+
                     <h2>2050</h2>
+
                     <p>Horizon Stratégique</p>
+
                 </div>
+
             </div>
 
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6">
+
                 <div class="stat-box">
+
                     <h2>14</h2>
+
                     <p>Régions Concernées</p>
+
                 </div>
+
             </div>
 
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6">
+
                 <div class="stat-box">
+
                     <h2>100%</h2>
+
                     <p>Inclusion Territoriale</p>
+
                 </div>
+
             </div>
 
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6">
+
                 <div class="stat-box">
+
                     <h2>1</h2>
+
                     <p>Nation Unie</p>
+
                 </div>
+
             </div>
 
         </div>
@@ -304,7 +800,9 @@
 
 </section>
 
-<!-- DECLARATION NATIONALE -->
+<!-- =========================================
+DECLARATION NATIONALE
+========================================== -->
 
 <section class="national-declaration">
 
@@ -312,30 +810,51 @@
 
         <div class="declaration-box">
 
+            <span class="declaration-badge">
+                ENGAGEMENT NATIONAL
+            </span>
+
             <h2>
                 Notre Engagement envers le Peuple Sénégalais
             </h2>
 
-            <p>
-                Nous voulons un Sénégal où la croissance économique
-                bénéficie à tous les citoyens.
-            </p>
+            <div class="declaration-content">
 
-            <p>
-                Nous voulons un Sénégal où chaque enfant
-                reçoit une éducation de qualité.
-            </p>
+                <p>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Nous voulons un Sénégal où la croissance économique
+                    bénéficie à tous les citoyens.
+                </p>
 
-            <p>
-                Nous voulons un Sénégal où chaque citoyen
-                peut accéder aux soins, à l'emploi
-                et aux opportunités.
-            </p>
+                <p>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Nous voulons un Sénégal où chaque enfant
+                    reçoit une éducation de qualité.
+                </p>
 
-            <p>
-                Nous voulons un Sénégal souverain,
-                stable, ambitieux et respecté.
-            </p>
+                <p>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Nous voulons un Sénégal où chaque citoyen
+                    peut accéder aux soins, à l'emploi
+                    et aux opportunités.
+                </p>
+
+                <p>
+                    <i class="bi bi-check-circle-fill"></i>
+                    Nous voulons un Sénégal souverain,
+                    stable, ambitieux et respecté.
+                </p>
+
+            </div>
+
+            <div class="text-center mt-5">
+
+                <a href="#programme" class="vision-btn">
+                    Découvrir Notre Programme
+                    <i class="bi bi-arrow-right"></i>
+                </a>
+
+            </div>
 
         </div>
 
@@ -343,7 +862,9 @@
 
 </section>
 
-<!-- PRIORITES NATIONALES -->
+<!-- =========================================
+PRIORITES NATIONALES ULTIMATE PREMIUM
+========================================= -->
 
 <section class="national-priorities">
 
@@ -351,9 +872,18 @@
 
         <div class="section-header text-center">
 
-            <span>PRIORITÉS NATIONALES</span>
+            <span class="section-badge">
+                PRIORITÉS NATIONALES
+            </span>
 
-            <h2>Nos Engagements Stratégiques</h2>
+            <h2>
+                Nos Engagements Stratégiques
+            </h2>
+
+            <p>
+                Une vision ambitieuse pour bâtir un Sénégal plus fort,
+                plus prospère et plus solidaire.
+            </p>
 
         </div>
 
@@ -371,8 +901,12 @@
 
                     <p>
                         Former une jeunesse compétitive
-                        pour les défis du XXIe siècle.
+                        et préparer les talents de demain.
                     </p>
+
+                    <a href="#" class="priority-btn">
+                        Découvrir
+                    </a>
 
                 </div>
 
@@ -390,8 +924,12 @@
 
                     <p>
                         Garantir un accès équitable
-                        aux soins de qualité.
+                        aux soins de qualité pour tous.
                     </p>
+
+                    <a href="#" class="priority-btn">
+                        Découvrir
+                    </a>
 
                 </div>
 
@@ -412,6 +950,10 @@
                         pour chaque citoyen.
                     </p>
 
+                    <a href="#" class="priority-btn">
+                        Découvrir
+                    </a>
+
                 </div>
 
             </div>
@@ -422,7 +964,9 @@
 
 </section>
 
-<!-- GALERIE INSTITUTIONNELLE -->
+<!-- =========================================
+GALERIE INSTITUTIONNELLE ULTIMATE PREMIUM
+========================================= -->
 
 <section class="national-gallery">
 
@@ -430,7 +974,9 @@
 
         <div class="section-header text-center mb-5">
 
-            <span>ACTION SUR LE TERRAIN</span>
+            <span class="section-badge">
+                ACTION SUR LE TERRAIN
+            </span>
 
             <h2>
                 Un Leadership au Service des Populations
@@ -438,15 +984,13 @@
 
             <p>
                 Notre vision se construit au contact des citoyens,
-                dans les quartiers, les villages, les communes
-                et les territoires qui font la richesse du Sénégal.
+                dans les quartiers, les villages et les territoires
+                qui font la richesse du Sénégal.
             </p>
 
         </div>
 
-        <div class="row g-4">
-
-            <!-- PHOTO PRINCIPALE -->
+        <div class="row g-4 align-items-stretch">
 
             <div class="col-lg-6">
 
@@ -459,14 +1003,26 @@
 
                     <div class="photo-overlay">
 
-                        <h3>
-                            Une Vision Portée par l'Action
-                        </h3>
+                        <div>
 
-                        <p>
-                            Une présence constante auprès des populations
-                            pour comprendre, écouter et agir.
-                        </p>
+                            <span class="overlay-tag">
+                                Leadership
+                            </span>
+
+                            <h3>
+                                Une Vision Portée par l'Action
+                            </h3>
+
+                            <p>
+                                Une présence constante auprès des populations
+                                pour comprendre, écouter et agir.
+                            </p>
+
+                            <a href="#" class="overlay-btn">
+                                En savoir plus
+                            </a>
+
+                        </div>
 
                     </div>
 
@@ -474,20 +1030,18 @@
 
             </div>
 
-            <!-- PHOTOS TERRAIN -->
-
             <div class="col-lg-6">
 
                 <div class="row g-4">
 
-                    <div class="col-6">
+                    <div class="col-md-6">
 
                         <div class="photo-card">
 
                             <img
                                 src="{% static 'images/action1.jpg' %}"
                                 class="small-photo"
-                                alt=""
+                                alt="Écoute des populations"
                             >
 
                             <div class="photo-caption">
@@ -498,14 +1052,14 @@
 
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-md-6">
 
                         <div class="photo-card">
 
                             <img
                                 src="{% static 'images/action2.jpg' %}"
                                 class="small-photo"
-                                alt=""
+                                alt="Développement agricole"
                             >
 
                             <div class="photo-caption">
@@ -516,14 +1070,14 @@
 
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-md-6">
 
                         <div class="photo-card">
 
                             <img
                                 src="{% static 'images/action3.jpg' %}"
                                 class="small-photo"
-                                alt=""
+                                alt="Engagement jeunesse"
                             >
 
                             <div class="photo-caption">
@@ -534,14 +1088,14 @@
 
                     </div>
 
-                    <div class="col-6">
+                    <div class="col-md-6">
 
                         <div class="photo-card">
 
                             <img
                                 src="{% static 'images/action4.jpg' %}"
                                 class="small-photo"
-                                alt=""
+                                alt="Protection environnement"
                             >
 
                             <div class="photo-caption">
@@ -561,16 +1115,29 @@
     </div>
 
 </section>
-
-<!-- BANNIERE PRESIDENTIELLE -->
+<!-- ==================================================
+BANNIERE PRESIDENTIELLE ULTIMATE PREMIUM
+================================================== -->
 
 <section class="presidential-banner">
 
-    <div class="container text-center">
+    <div class="banner-overlay"></div>
+
+    <!-- Décorations -->
+    <div class="floating-circle circle-1"></div>
+    <div class="floating-circle circle-2"></div>
+    <div class="floating-circle circle-3"></div>
+
+    <div class="container text-center banner-content">
+
+        <span class="banner-badge">
+            <i class="bi bi-stars"></i>
+            Vision Nationale
+        </span>
 
         <h2>
             Ensemble, Construisons
-            le Sénégal de Demain
+            <span>le Sénégal de Demain</span>
         </h2>
 
         <p>
@@ -578,12 +1145,310 @@
             Une République au Service de Tous
         </p>
 
-        <a href="{% url 'adhesion' %}" class="btn btn-light btn-lg mt-4">
-            Rejoindre le Mouvement
-        </a>
+        <div class="banner-buttons">
+
+            <a href="{% url 'adhesion' %}"
+               class="btn btn-join">
+
+                <i class="bi bi-people-fill"></i>
+                Rejoindre le Mouvement
+
+            </a>
+
+            <a href="#programme"
+               class="btn btn-program">
+
+                <i class="bi bi-arrow-right-circle-fill"></i>
+                Découvrir le Programme
+
+            </a>
+
+        </div>
 
     </div>
 
 </section>
+
+<style>
+
+/* ==================================================
+BANNIERE PRESIDENTIELLE ULTIMATE PREMIUM
+================================================== */
+
+.presidential-banner{
+    position:relative;
+    overflow:hidden;
+    padding:140px 0;
+    background:
+        linear-gradient(
+            135deg,
+            #0f172a 0%,
+            #1e3a8a 50%,
+            #0ea5e9 100%
+        );
+}
+
+/* Overlay */
+
+.banner-overlay{
+    position:absolute;
+    inset:0;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(255,255,255,.15),
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at bottom left,
+            rgba(255,255,255,.08),
+            transparent 35%
+        );
+}
+
+/* Contenu */
+
+.banner-content{
+    position:relative;
+    z-index:2;
+}
+
+/* Badge */
+
+.banner-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 24px;
+    margin-bottom:30px;
+
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,.25);
+    border-radius:50px;
+
+    color:#fff;
+    font-weight:600;
+    font-size:.95rem;
+
+    animation:fadeUp .8s ease;
+}
+
+/* Titre */
+
+.presidential-banner h2{
+    color:#fff;
+    font-size:clamp(2.5rem,5vw,4.8rem);
+    font-weight:900;
+    line-height:1.15;
+    margin-bottom:25px;
+
+    text-shadow:
+        0 4px 20px rgba(0,0,0,.25);
+
+    animation:fadeUp 1s ease;
+}
+
+.presidential-banner h2 span{
+    display:block;
+    color:#facc15;
+}
+
+/* Texte */
+
+.presidential-banner p{
+    max-width:850px;
+    margin:auto;
+    color:rgba(255,255,255,.95);
+
+    font-size:1.25rem;
+    line-height:1.8;
+
+    animation:fadeUp 1.2s ease;
+}
+
+/* Boutons */
+
+.banner-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:45px;
+
+    animation:fadeUp 1.4s ease;
+}
+
+.btn-join,
+.btn-program{
+    position:relative;
+    overflow:hidden;
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:16px 34px;
+    border-radius:60px;
+
+    font-weight:700;
+    font-size:1rem;
+
+    text-decoration:none;
+
+    transition:all .4s ease;
+}
+
+/* Bouton Principal */
+
+.btn-join{
+    background:#ffffff;
+    color:#0f172a;
+
+    box-shadow:
+        0 15px 35px rgba(255,255,255,.25);
+}
+
+.btn-join:hover{
+    transform:translateY(-5px);
+    color:#0f172a;
+
+    box-shadow:
+        0 20px 45px rgba(255,255,255,.35);
+}
+
+/* Bouton Secondaire */
+
+.btn-program{
+    background:rgba(255,255,255,.12);
+
+    color:#fff;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    backdrop-filter:blur(12px);
+}
+
+.btn-program:hover{
+    background:rgba(255,255,255,.20);
+    color:#fff;
+    transform:translateY(-5px);
+}
+
+/* Effet lumineux */
+
+.btn-join::before,
+.btn-program::before{
+    content:'';
+
+    position:absolute;
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.4),
+            transparent
+        );
+
+    transition:.8s;
+}
+
+.btn-join:hover::before,
+.btn-program:hover::before{
+    left:100%;
+}
+
+/* Cercles décoratifs */
+
+.floating-circle{
+    position:absolute;
+    border-radius:50%;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(5px);
+}
+
+.circle-1{
+    width:220px;
+    height:220px;
+    top:-60px;
+    right:8%;
+    animation:float 8s ease-in-out infinite;
+}
+
+.circle-2{
+    width:120px;
+    height:120px;
+    bottom:15%;
+    left:8%;
+    animation:float 6s ease-in-out infinite;
+}
+
+.circle-3{
+    width:70px;
+    height:70px;
+    top:50%;
+    right:20%;
+    animation:float 5s ease-in-out infinite;
+}
+
+/* Animations */
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-20px);
+    }
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    .presidential-banner{
+        padding:100px 0;
+    }
+
+    .presidential-banner h2{
+        font-size:2.4rem;
+    }
+
+    .presidential-banner p{
+        font-size:1rem;
+    }
+
+    .banner-buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn-join,
+    .btn-program{
+        width:100%;
+        max-width:320px;
+        justify-content:center;
+    }
+}
+
+</style>
 
 {% endblock %}

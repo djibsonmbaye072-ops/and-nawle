@@ -3,50 +3,79 @@
 
 {% block content %}
 
-<!-- HERO PRESIDENTIEL -->
+<!-- ==================================================
+HERO PRESIDENTIEL ULTIMATE
+================================================== -->
 
 <section class="join-hero">
 
     <div class="hero-overlay"></div>
+    <div class="hero-particles"></div>
 
     <div class="container position-relative text-center">
 
         <span class="hero-badge">
+            <i class="fas fa-flag me-2"></i>
             MOUVEMENT CITOYEN
         </span>
 
         <h1>
-            Rejoignez AND NAWLE
+            Rejoignez <span>AND NAWLE</span>
         </h1>
 
         <p>
-            Engagez-vous pour bâtir un Sénégal plus juste, plus fort et plus prospère.
-            Votre voix, votre énergie et votre engagement peuvent changer l'avenir.
+            Engagez-vous pour bâtir un Sénégal plus juste,
+            plus fort et plus prospère.
+            Votre voix, votre énergie et votre engagement
+            peuvent changer l'avenir.
         </p>
+
+        <div class="hero-buttons">
+
+            <a href="#adhesion" class="btn-primary-custom">
+                <i class="fas fa-user-plus"></i>
+                Adhérer Maintenant
+            </a>
+
+            <a href="#vision" class="btn-secondary-custom">
+                <i class="fas fa-arrow-down"></i>
+                Découvrir Notre Vision
+            </a>
+
+        </div>
 
     </div>
 
 </section>
 
-<!-- VALEURS -->
+<!-- ==================================================
+VALEURS
+================================================== -->
 
-<section class="values-section">
+<section class="values-section" id="vision">
 
     <div class="container">
 
         <div class="section-title text-center">
 
-            <span>Pourquoi nous rejoindre</span>
+            <span>
+                Pourquoi nous rejoindre
+            </span>
 
             <h2>
                 Une vision ambitieuse pour nos territoires
             </h2>
 
+            <p>
+                Ensemble, construisons un mouvement fort,
+                inclusif et tourné vers l'avenir.
+            </p>
+
         </div>
 
-        <div class="row g-4 mt-4">
+        <div class="row g-4 mt-5">
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6">
 
                 <div class="value-card">
 
@@ -54,17 +83,20 @@
                         <i class="fas fa-users"></i>
                     </div>
 
-                    <h4>Engagement Citoyen</h4>
+                    <h4>
+                        Engagement Citoyen
+                    </h4>
 
                     <p>
-                        Participer activement au développement local et national.
+                        Participer activement au développement
+                        local et national pour un Sénégal meilleur.
                     </p>
 
                 </div>
 
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6">
 
                 <div class="value-card">
 
@@ -72,17 +104,20 @@
                         <i class="fas fa-lightbulb"></i>
                     </div>
 
-                    <h4>Innovation</h4>
+                    <h4>
+                        Innovation
+                    </h4>
 
                     <p>
-                        Encourager des solutions modernes au service des populations.
+                        Promouvoir des solutions modernes
+                        et adaptées aux réalités des territoires.
                     </p>
 
                 </div>
 
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-4 col-md-6 mx-auto">
 
                 <div class="value-card">
 
@@ -90,10 +125,13 @@
                         <i class="fas fa-handshake"></i>
                     </div>
 
-                    <h4>Solidarité</h4>
+                    <h4>
+                        Solidarité
+                    </h4>
 
                     <p>
-                        Construire une nation forte basée sur l'entraide et la justice.
+                        Construire une nation forte basée
+                        sur la justice, l'équité et l'entraide.
                     </p>
 
                 </div>
@@ -106,17 +144,23 @@
 
 </section>
 
-<!-- CHIFFRES -->
+<!-- ==================================================
+STATISTIQUES
+================================================== -->
 
 <section class="stats-section">
 
     <div class="container">
 
-        <div class="row text-center">
+        <div class="row g-4 text-center">
 
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6">
 
                 <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
 
                     <h2>14</h2>
 
@@ -126,9 +170,13 @@
 
             </div>
 
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6">
 
                 <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fas fa-city"></i>
+                    </div>
 
                     <h2>46</h2>
 
@@ -138,9 +186,13 @@
 
             </div>
 
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6">
 
                 <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
 
                     <h2>557</h2>
 
@@ -150,9 +202,13 @@
 
             </div>
 
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6">
 
                 <div class="stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
 
                     <h2>∞</h2>
 
@@ -168,7 +224,9 @@
 
 </section>
 
-<!-- FORMULAIRE -->
+<!-- ==========================================
+FORMULAIRE ADHÉSION ULTIMATE PREMIUM
+========================================== -->
 
 <section class="join-form-section">
 
@@ -180,34 +238,49 @@
 
                 <div class="join-card">
 
-                    <div class="text-center mb-5">
+                    <!-- DECORATIONS -->
+
+                    <div class="card-shape shape-1"></div>
+                    <div class="card-shape shape-2"></div>
+
+                    <!-- HEADER -->
+
+                    <div class="text-center form-header">
 
                         <span class="form-badge">
-                            ADHÉSION
+                            <i class="fas fa-users me-2"></i>
+                            ADHÉSION OFFICIELLE
                         </span>
 
-                        <h2>
-                            Devenez membre du mouvement
+                        <h2 class="form-title">
+                            Rejoignez le Mouvement
+                            <span>AND NAWLE</span>
                         </h2>
 
-                        <p>
-                            Remplissez le formulaire ci-dessous pour rejoindre
-                            officiellement AND NAWLE.
+                        <p class="form-subtitle">
+                            Engagez-vous pour le développement des territoires,
+                            la justice sociale et une gouvernance moderne au
+                            service des populations.
                         </p>
 
                     </div>
 
-                    <form>
+                    <!-- FORMULAIRE -->
+
+                    <form class="join-form">
 
                         <div class="row">
 
                             <div class="col-md-6 mb-4">
 
-                                <label>Nom complet</label>
+                                <label class="form-label">
+                                    <i class="fas fa-user"></i>
+                                    Nom complet
+                                </label>
 
                                 <input
                                     type="text"
-                                    class="form-control"
+                                    class="form-control premium-input"
                                     placeholder="Votre nom complet"
                                     required
                                 >
@@ -216,11 +289,14 @@
 
                             <div class="col-md-6 mb-4">
 
-                                <label>Téléphone</label>
+                                <label class="form-label">
+                                    <i class="fas fa-phone"></i>
+                                    Téléphone
+                                </label>
 
                                 <input
-                                    type="text"
-                                    class="form-control"
+                                    type="tel"
+                                    class="form-control premium-input"
                                     placeholder="+221 XX XXX XX XX"
                                     required
                                 >
@@ -231,11 +307,14 @@
 
                         <div class="mb-4">
 
-                            <label>Email</label>
+                            <label class="form-label">
+                                <i class="fas fa-envelope"></i>
+                                Adresse Email
+                            </label>
 
                             <input
                                 type="email"
-                                class="form-control"
+                                class="form-control premium-input"
                                 placeholder="Votre adresse email"
                             >
 
@@ -243,11 +322,14 @@
 
                         <div class="mb-4">
 
-                            <label>Profession</label>
+                            <label class="form-label">
+                                <i class="fas fa-briefcase"></i>
+                                Profession
+                            </label>
 
                             <input
                                 type="text"
-                                class="form-control"
+                                class="form-control premium-input"
                                 placeholder="Votre profession"
                             >
 
@@ -255,27 +337,56 @@
 
                         <div class="mb-4">
 
-                            <label>Localité</label>
+                            <label class="form-label">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Localité
+                            </label>
 
                             <input
                                 type="text"
-                                class="form-control"
-                                placeholder="Ville / Commune"
+                                class="form-control premium-input"
+                                placeholder="Ville / Commune / Département"
                             >
 
                         </div>
 
                         <div class="mb-4">
 
-                            <label>Message</label>
+                            <label class="form-label">
+                                <i class="fas fa-comment-dots"></i>
+                                Motivation
+                            </label>
 
                             <textarea
                                 rows="5"
-                                class="form-control"
-                                placeholder="Pourquoi souhaitez-vous rejoindre AND NAWLE ?"
+                                class="form-control premium-input premium-textarea"
+                                placeholder="Expliquez brièvement pourquoi vous souhaitez rejoindre AND NAWLE..."
                             ></textarea>
 
                         </div>
+
+                        <!-- CHECKBOX -->
+
+                        <div class="form-check custom-check mb-4">
+
+                            <input
+                                class="form-check-input"
+                                type="checkbox"
+                                id="accept"
+                                required
+                            >
+
+                            <label
+                                class="form-check-label"
+                                for="accept"
+                            >
+                                Je confirme l'exactitude des informations fournies
+                                et souhaite adhérer au mouvement AND NAWLE.
+                            </label>
+
+                        </div>
+
+                        <!-- BUTTON -->
 
                         <div class="text-center">
 
@@ -283,8 +394,10 @@
                                 type="submit"
                                 class="join-btn"
                             >
-                                <i class="fas fa-paper-plane me-2"></i>
-                                Envoyer ma demande d'adhésion
+                                <span>
+                                    <i class="fas fa-paper-plane me-2"></i>
+                                    Envoyer ma demande d'adhésion
+                                </span>
                             </button>
 
                         </div>
@@ -301,187 +414,842 @@
 
 </section>
 
+<!-- ==========================================
+CSS ULTIMATE PREMIUM
+========================================== -->
+
 <style>
 
-/* HERO */
+:root{
+    --primary:#0d6efd;
+    --secondary:#00c6ff;
+    --dark:#0f172a;
+    --text:#64748b;
+    --white:#ffffff;
+}
+
+/* SECTION */
+
+.join-form-section{
+    position:relative;
+    padding:120px 0;
+    background:
+        linear-gradient(
+            135deg,
+            #f8fbff 0%,
+            #eef7ff 100%
+        );
+    overflow:hidden;
+}
+
+/* CARD */
+
+.join-card{
+    position:relative;
+    overflow:hidden;
+
+    background:
+        rgba(255,255,255,.92);
+
+    backdrop-filter:blur(18px);
+
+    border-radius:30px;
+
+    padding:60px;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.08);
+
+    border:1px solid rgba(255,255,255,.7);
+
+    animation:fadeUp 1s ease;
+}
+
+/* DECORATIONS */
+
+.card-shape{
+    position:absolute;
+    border-radius:50%;
+    z-index:0;
+}
+
+.shape-1{
+    width:220px;
+    height:220px;
+
+    background:
+        rgba(13,110,253,.08);
+
+    top:-70px;
+    right:-70px;
+}
+
+.shape-2{
+    width:150px;
+    height:150px;
+
+    background:
+        rgba(0,198,255,.10);
+
+    bottom:-40px;
+    left:-40px;
+}
+
+/* CONTENT */
+
+.join-card>*{
+    position:relative;
+    z-index:2;
+}
+
+/* BADGE */
+
+.form-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    color:#fff;
+
+    font-weight:700;
+    font-size:.85rem;
+
+    letter-spacing:1px;
+
+    margin-bottom:25px;
+
+    box-shadow:
+        0 10px 25px rgba(13,110,253,.25);
+}
+
+/* TITLES */
+
+.form-title{
+    font-size:3rem;
+    font-weight:800;
+    color:var(--dark);
+    margin-bottom:20px;
+}
+
+.form-title span{
+    display:block;
+    color:var(--primary);
+}
+
+.form-subtitle{
+    color:var(--text);
+    font-size:1.05rem;
+    max-width:650px;
+    margin:auto;
+    line-height:1.8;
+}
+
+/* LABELS */
+
+.form-label{
+    display:block;
+    font-weight:700;
+    margin-bottom:10px;
+    color:var(--dark);
+}
+
+.form-label i{
+    color:var(--primary);
+    margin-right:8px;
+}
+
+/* INPUTS */
+
+.premium-input{
+    height:60px;
+
+    border:none;
+
+    border-radius:16px;
+
+    background:#f8fafc;
+
+    padding:0 20px;
+
+    font-size:1rem;
+
+    transition:.4s ease;
+
+    box-shadow:
+        inset 0 0 0 1px rgba(15,23,42,.08);
+}
+
+.premium-textarea{
+    height:auto;
+    padding-top:18px;
+}
+
+.premium-input:focus{
+    background:#fff;
+
+    box-shadow:
+        0 0 0 4px rgba(13,110,253,.15),
+        0 10px 30px rgba(13,110,253,.10);
+
+    transform:translateY(-2px);
+
+    border:none;
+}
+
+/* CHECKBOX */
+
+.custom-check{
+    font-size:.95rem;
+    color:var(--text);
+}
+
+.custom-check input{
+    cursor:pointer;
+}
+
+/* BUTTON */
+
+.join-btn{
+    position:relative;
+
+    border:none;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--primary),
+            var(--secondary)
+        );
+
+    color:#fff;
+
+    padding:18px 40px;
+
+    border-radius:60px;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    overflow:hidden;
+
+    transition:.4s ease;
+
+    box-shadow:
+        0 15px 35px rgba(13,110,253,.35);
+}
+
+.join-btn:hover{
+    transform:
+        translateY(-6px)
+        scale(1.03);
+
+    box-shadow:
+        0 20px 45px rgba(13,110,253,.45);
+}
+
+.join-btn::before{
+    content:'';
+
+    position:absolute;
+
+    top:0;
+    left:-100%;
+
+    width:100%;
+    height:100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255,255,255,.35),
+            transparent
+        );
+
+    transition:.8s;
+}
+
+.join-btn:hover::before{
+    left:100%;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .join-card{
+        padding:35px 25px;
+    }
+
+    .form-title{
+        font-size:2rem;
+    }
+
+    .join-btn{
+        width:100%;
+    }
+
+}
+
+<style>
+
+/* ==================================================
+HERO SECTION ULTIMATE
+================================================== */
 
 .join-hero{
     position:relative;
-    padding:150px 0;
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
     overflow:hidden;
+    padding:140px 0;
+
     background:
     linear-gradient(
-    135deg,
-    #0f172a,
-    #1e293b,
-    #0f766e
+        135deg,
+        #0f172a 0%,
+        #1e293b 50%,
+        #0f766e 100%
     );
-    color:white;
+
+    color:#fff;
+}
+
+.join-hero::before{
+    content:'';
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at top right,
+        rgba(255,255,255,.15),
+        transparent 35%
+    );
+
+    pointer-events:none;
+}
+
+.join-hero::after{
+    content:'';
+    position:absolute;
+    width:600px;
+    height:600px;
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        rgba(15,118,110,.25),
+        transparent 70%
+    );
+
+    bottom:-250px;
+    left:-150px;
+
+    animation:floatGlow 8s ease-in-out infinite;
 }
 
 .hero-overlay{
     position:absolute;
     inset:0;
+
     background:
-    radial-gradient(circle at top right,
-    rgba(255,255,255,.15),
-    transparent 40%);
+    linear-gradient(
+        rgba(0,0,0,.25),
+        rgba(0,0,0,.45)
+    );
 }
 
 .hero-badge{
-    display:inline-block;
-    padding:10px 22px;
+    position:relative;
+    z-index:2;
+
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+
+    padding:12px 28px;
+
     border-radius:50px;
-    background:rgba(255,255,255,.15);
-    backdrop-filter:blur(10px);
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.15);
+
     font-size:.85rem;
-    letter-spacing:2px;
-    margin-bottom:25px;
-}
-
-.join-hero h1{
-    font-size:4rem;
-    font-weight:800;
-    margin-bottom:20px;
-}
-
-.join-hero p{
-    max-width:800px;
-    margin:auto;
-    font-size:1.2rem;
-    opacity:.9;
-}
-
-/* SECTION */
-
-.section-title span{
-    color:#0f766e;
     font-weight:700;
     letter-spacing:2px;
     text-transform:uppercase;
+
+    margin-bottom:30px;
+
+    animation:fadeDown .9s ease;
+}
+
+.join-hero h1{
+    position:relative;
+    z-index:2;
+
+    font-size:clamp(3rem,7vw,5.5rem);
+    font-weight:900;
+    line-height:1.1;
+
+    margin-bottom:25px;
+}
+
+.join-hero h1 span{
+    color:#34d399;
+}
+
+.join-hero p{
+    position:relative;
+    z-index:2;
+
+    max-width:850px;
+    margin:auto;
+
+    font-size:1.2rem;
+    line-height:1.9;
+
+    opacity:.95;
+}
+
+/* ==================================================
+SECTION TITLE
+================================================== */
+
+.section-title{
+    margin-bottom:60px;
+}
+
+.section-title span{
+    display:inline-block;
+
+    color:#0f766e;
+
+    font-size:.9rem;
+    font-weight:800;
+
+    letter-spacing:3px;
+    text-transform:uppercase;
+
+    margin-bottom:12px;
 }
 
 .section-title h2{
-    font-size:2.5rem;
-    font-weight:800;
-    margin-top:10px;
+    font-size:clamp(2rem,5vw,3rem);
+    font-weight:900;
+
+    color:#0f172a;
 }
 
+.section-title p{
+    max-width:750px;
+    margin:20px auto 0;
+
+    color:#64748b;
+    line-height:1.8;
+}
+
+/* ==================================================
+VALUES SECTION
+================================================== */
+
 .values-section{
-    padding:100px 0;
+    padding:120px 0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        #ffffff,
+        #f8fafc
+    );
 }
 
 .value-card{
-    background:white;
-    padding:40px;
-    border-radius:25px;
+    position:relative;
+
+    background:#fff;
+
+    padding:45px 35px;
+
+    border-radius:30px;
+
     text-align:center;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-    transition:.4s;
+
     height:100%;
+
+    overflow:hidden;
+
+    border:1px solid rgba(15,118,110,.08);
+
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.05);
+
+    transition:all .45s ease;
+}
+
+.value-card::before{
+    content:'';
+
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:5px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #0f766e,
+        #14b8a6
+    );
+
+    transform:scaleX(0);
+
+    transition:.4s;
+}
+
+.value-card:hover::before{
+    transform:scaleX(1);
 }
 
 .value-card:hover{
-    transform:translateY(-10px);
+    transform:translateY(-12px);
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.12);
 }
 
 .value-card .icon{
-    width:80px;
-    height:80px;
-    margin:auto auto 20px;
+    width:90px;
+    height:90px;
+
+    margin:0 auto 25px;
+
     border-radius:50%;
+
     display:flex;
     align-items:center;
     justify-content:center;
-    font-size:28px;
+
+    font-size:34px;
+
     color:white;
-    background:#0f766e;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f766e,
+        #14b8a6
+    );
+
+    box-shadow:
+    0 15px 35px rgba(15,118,110,.25);
 }
 
-/* STATS */
+.value-card h4{
+    font-size:1.4rem;
+    font-weight:800;
+
+    margin-bottom:15px;
+
+    color:#0f172a;
+}
+
+.value-card p{
+    color:#64748b;
+    line-height:1.8;
+}
+
+/* ==================================================
+STATS SECTION
+================================================== */
 
 .stats-section{
-    padding:80px 0;
-    background:#f8fafc;
+    padding:120px 0;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f172a,
+        #0f766e
+    );
+}
+
+.stat-card{
+    background:
+    rgba(255,255,255,.08);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    padding:40px 25px;
+
+    border-radius:25px;
+
+    text-align:center;
+
+    transition:.4s ease;
+
+    height:100%;
+}
+
+.stat-card:hover{
+    transform:translateY(-10px);
+
+    background:
+    rgba(255,255,255,.12);
 }
 
 .stat-card h2{
-    font-size:3rem;
-    font-weight:800;
-    color:#0f766e;
+    font-size:3.2rem;
+    font-weight:900;
+
+    color:#34d399;
+
+    margin-bottom:10px;
 }
 
 .stat-card p{
-    color:#64748b;
+    color:rgba(255,255,255,.85);
+    margin:0;
 }
 
-/* FORMULAIRE */
+/* ==================================================
+FORM SECTION
+================================================== */
 
 .join-form-section{
-    padding:100px 0;
-    background:white;
+    padding:120px 0;
+
+    background:
+    linear-gradient(
+        to bottom,
+        #f8fafc,
+        #ffffff
+    );
 }
 
 .join-card{
-    background:white;
-    border-radius:30px;
-    padding:50px;
-    box-shadow:0 25px 60px rgba(0,0,0,.08);
+    background:#fff;
+
+    border-radius:35px;
+
+    padding:60px;
+
+    box-shadow:
+    0 25px 70px rgba(0,0,0,.08);
+
+    border:1px solid rgba(15,118,110,.08);
 }
 
 .form-badge{
+    display:inline-block;
+
     color:#0f766e;
-    font-weight:700;
+
+    font-size:.9rem;
+    font-weight:800;
+
     letter-spacing:2px;
+    text-transform:uppercase;
+
+    margin-bottom:15px;
 }
 
 .join-card h2{
-    font-size:2.5rem;
-    font-weight:800;
+    font-size:clamp(2rem,5vw,3rem);
+    font-weight:900;
+
+    color:#0f172a;
 }
 
 .form-control{
-    border-radius:15px;
-    padding:14px 18px;
+    height:58px;
+
+    border-radius:16px;
+
     border:1px solid #dbe4ee;
-}
 
-.form-control:focus{
-    box-shadow:none;
-    border-color:#0f766e;
-}
+    padding:14px 20px;
 
-.join-btn{
-    background:#0f766e;
-    color:white;
-    border:none;
-    padding:16px 40px;
-    border-radius:50px;
-    font-weight:700;
     transition:.3s;
 }
 
-.join-btn:hover{
-    transform:translateY(-3px);
-    background:#115e59;
+textarea.form-control{
+    min-height:140px;
 }
 
-@media(max-width:768px){
+.form-control:focus{
+    border-color:#0f766e;
 
-    .join-hero h1{
-        font-size:2.5rem;
+    box-shadow:
+    0 0 0 4px rgba(15,118,110,.10);
+}
+
+/* ==================================================
+BUTTON
+================================================== */
+
+.join-btn{
+    position:relative;
+
+    border:none;
+
+    padding:16px 45px;
+
+    border-radius:60px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0f766e,
+        #14b8a6
+    );
+
+    color:white;
+
+    font-weight:800;
+
+    overflow:hidden;
+
+    transition:.35s ease;
+}
+
+.join-btn:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 15px 35px rgba(15,118,110,.30);
+}
+
+.join-btn:active{
+    transform:translateY(-2px);
+}
+
+/* ==================================================
+ANIMATIONS
+================================================== */
+
+@keyframes fadeDown{
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes floatGlow{
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-30px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+}
+
+/* ==================================================
+RESPONSIVE
+================================================== */
+
+@media (max-width:991px){
+
+    .join-hero{
+        min-height:auto;
+        padding:120px 0;
     }
 
     .join-card{
-        padding:30px;
+        padding:40px;
+    }
+}
+
+@media (max-width:768px){
+
+    .join-hero h1{
+        font-size:2.7rem;
+    }
+
+    .join-hero p{
+        font-size:1rem;
     }
 
     .section-title h2{
         font-size:2rem;
     }
 
+    .join-card{
+        padding:30px;
+    }
+
+    .value-card{
+        padding:35px 25px;
+    }
+
+    .stat-card h2{
+        font-size:2.5rem;
+    }
 }
 
-</style>
+@media (max-width:576px){
+
+    .hero-badge{
+        font-size:.75rem;
+        letter-spacing:1px;
+    }
+
+    .join-hero{
+        padding:100px 0;
+    }
+
+    .join-btn{
+        width:100%;
+    }
+}
 
 {% endblock %}

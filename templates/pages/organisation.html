@@ -7,56 +7,108 @@
 
 {% block content %}
 
-<!-- HERO PRESIDENTIEL -->
+{% load static %}
+
+<!-- ==========================================
+HERO SECTION ULTIMATE PREMIUM
+========================================== -->
 
 <section class="organisation-hero">
 
+    <!-- Background Elements -->
+
     <div class="hero-overlay"></div>
+    <div class="hero-glow glow-1"></div>
+    <div class="hero-glow glow-2"></div>
 
     <div class="container position-relative">
 
-        <div class="row align-items-center">
+        <div class="row align-items-center min-vh-100">
+
+            <!-- LEFT CONTENT -->
 
             <div class="col-lg-7">
 
-                <span class="hero-badge">
-                    ORGANISATION NATIONALE
-                </span>
+                <div class="hero-content">
 
-                <h1 class="hero-title">
-                    Une Organisation Solide
-                    au Service du Sénégal
-                </h1>
+                    <span class="hero-badge">
+                        <i class="bi bi-stars"></i>
+                        ORGANISATION NATIONALE
+                    </span>
 
-                <p class="hero-description">
-                    AND NAWLE s'appuie sur une structure moderne,
-                    transparente et profondément ancrée dans les
-                    territoires afin de garantir une action politique
-                    efficace, proche des citoyens et tournée vers
-                    l'avenir.
-                </p>
+                    <h1 class="hero-title">
+                        Une Organisation Solide
+                        <span>au Service du Sénégal</span>
+                    </h1>
 
-                <div class="hero-actions">
+                    <p class="hero-description">
+                        AND NAWLE s'appuie sur une structure moderne,
+                        transparente et profondément ancrée dans les
+                        territoires afin de garantir une action politique
+                        efficace, proche des citoyens et tournée vers
+                        l'avenir.
+                    </p>
 
-                    <a href="#" class="btn btn-primary btn-lg">
-                        Rejoindre le Mouvement
-                    </a>
+                    <div class="hero-actions">
 
-                    <a href="#structure" class="btn btn-outline-light btn-lg">
-                        Découvrir l'Organisation
-                    </a>
+                        <a href="#" class="btn btn-primary btn-lg premium-btn">
+
+                            <i class="bi bi-people-fill"></i>
+                            Rejoindre le Mouvement
+
+                        </a>
+
+                        <a href="#structure"
+                           class="btn btn-outline-light btn-lg premium-btn-outline">
+
+                            <i class="bi bi-diagram-3-fill"></i>
+                            Découvrir l'Organisation
+
+                        </a>
+
+                    </div>
+
+                    <div class="hero-stats">
+
+                        <div class="stat-item">
+
+                            <h3>14</h3>
+                            <span>Régions</span>
+
+                        </div>
+
+                        <div class="stat-item">
+
+                            <h3>46+</h3>
+                            <span>Départements</span>
+
+                        </div>
+
+                        <div class="stat-item">
+
+                            <h3>500+</h3>
+                            <span>Militants</span>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
             </div>
 
+            <!-- RIGHT CONTENT -->
+
             <div class="col-lg-5 text-center">
 
                 <div class="hero-logo-box">
 
+                    <div class="logo-ring"></div>
+                    <div class="logo-ring ring-2"></div>
+
                     <img
                         src="{% static 'images/logo.png' %}"
-                        class="img-fluid"
+                        class="img-fluid hero-logo"
                         alt="Logo AND NAWLE"
                     >
 
@@ -70,57 +122,105 @@
 
 </section>
 
-<!-- CHIFFRES -->
+<!-- =========================================
+STATISTIQUES PREMIUM ULTIMATE
+========================================= -->
 
 <section class="stats-section">
 
     <div class="container">
 
+        <!-- Titre -->
+
+        <div class="section-header text-center">
+
+            <span class="section-badge">
+                <i class="bi bi-bar-chart-fill"></i>
+                Notre Impact Territorial
+            </span>
+
+            <h2 class="section-title">
+                Une Présence sur l'ensemble du territoire
+            </h2>
+
+            <p class="section-subtitle">
+                Un mouvement citoyen implanté dans chaque région,
+                chaque département et chaque commune du Sénégal.
+            </p>
+
+        </div>
+
+        <!-- Statistiques -->
+
         <div class="row g-4">
 
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6">
 
                 <div class="stat-card">
 
-                    <h2>14</h2>
+                    <div class="stat-icon">
+                        <i class="bi bi-geo-alt-fill"></i>
+                    </div>
+
+                    <h2 class="counter">14</h2>
 
                     <span>Régions</span>
 
+                    <div class="card-glow"></div>
+
                 </div>
 
             </div>
 
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6">
 
                 <div class="stat-card">
 
-                    <h2>46</h2>
+                    <div class="stat-icon">
+                        <i class="bi bi-building-fill"></i>
+                    </div>
+
+                    <h2 class="counter">46</h2>
 
                     <span>Départements</span>
 
+                    <div class="card-glow"></div>
+
                 </div>
 
             </div>
 
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6">
 
                 <div class="stat-card">
 
-                    <h2>557</h2>
+                    <div class="stat-icon">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+
+                    <h2 class="counter">557</h2>
 
                     <span>Communes</span>
 
+                    <div class="card-glow"></div>
+
                 </div>
 
             </div>
 
-            <div class="col-md-3">
+            <div class="col-lg-3 col-md-6">
 
                 <div class="stat-card">
 
-                    <h2>100%</h2>
+                    <div class="stat-icon">
+                        <i class="bi bi-heart-fill"></i>
+                    </div>
+
+                    <h2 class="counter">100%</h2>
 
                     <span>Engagement Citoyen</span>
+
+                    <div class="card-glow"></div>
 
                 </div>
 
@@ -132,50 +232,139 @@
 
 </section>
 
-<!-- PRESENTATION -->
+{% load static %}
 
-<section class="content-section" id="structure">
+<!-- ==================================================
+STRUCTURE & GOUVERNANCE - ULTIMATE PREMIUM
+================================================== -->
+
+<section class="content-section premium-structure-section" id="structure">
 
     <div class="container">
 
         <div class="row align-items-center g-5">
 
+            <!-- LOGO -->
+
             <div class="col-lg-5 text-center">
 
-                <img
-                    src="{% static 'images/logo.png' %}"
-                    class="img-fluid organisation-logo"
-                    width="320"
-                    alt="Logo"
-                >
+                <div class="logo-wrapper">
+
+                    <div class="logo-glow"></div>
+
+                    <img
+                        src="{% static 'images/logo.png' %}"
+                        class="img-fluid organisation-logo"
+                        alt="Logo AND NAWLE"
+                        width="320"
+                    >
+
+                </div>
 
             </div>
+
+            <!-- CONTENT -->
 
             <div class="col-lg-7">
 
                 <span class="section-badge">
-                    GOUVERNANCE
+
+                    <i class="bi bi-diagram-3-fill me-2"></i>
+                    GOUVERNANCE MODERNE
+
                 </span>
 
                 <h2 class="section-title">
+
                     Une Organisation Moderne
-                    et Décentralisée
+                    <span class="text-gradient">
+                        et Décentralisée
+                    </span>
+
                 </h2>
 
                 <p class="lead">
+
                     Notre organisation repose sur une gouvernance
-                    responsable qui favorise la participation
-                    citoyenne, l'efficacité opérationnelle et
-                    la proximité avec les populations.
+                    responsable favorisant la participation
+                    citoyenne, l'efficacité opérationnelle
+                    et la proximité avec les populations.
+
                 </p>
 
-                <p>
+                <p class="description-text">
+
                     Grâce à une coordination nationale forte
                     et un réseau territorial dynamique,
                     chaque région, département et commune
                     participe activement à la construction
                     du projet politique porté par AND NAWLE.
+
                 </p>
+
+                <!-- STATS -->
+
+                <div class="row stats-row g-4">
+
+                    <div class="col-md-4">
+
+                        <div class="stat-card">
+
+                            <h3>14</h3>
+
+                            <p>Régions</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <div class="stat-card">
+
+                            <h3>46</h3>
+
+                            <p>Départements</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <div class="stat-card">
+
+                            <h3>557+</h3>
+
+                            <p>Communes</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- BUTTONS -->
+
+                <div class="structure-actions">
+
+                    <a href="#organisation"
+                       class="btn btn-primary-premium">
+
+                        <i class="bi bi-building me-2"></i>
+                        Découvrir l'Organisation
+
+                    </a>
+
+                    <a href="#adhesion"
+                       class="btn btn-outline-premium">
+
+                        <i class="bi bi-person-plus me-2"></i>
+                        Rejoindre le Mouvement
+
+                    </a>
+
+                </div>
 
             </div>
 

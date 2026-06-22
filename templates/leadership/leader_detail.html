@@ -1,0 +1,91 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="leader-section">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-5">
+
+                <img
+                    src="{{ leader.photo.url }}"
+                    class="leader-photo"
+                    alt="{{ leader.full_name }}"
+                >
+
+            </div>
+
+            <div class="col-lg-7">
+
+                <span class="leader-badge">
+
+                    Président du Mouvement
+
+                </span>
+
+                <h1>
+
+                    {{ leader.full_name }}
+
+                </h1>
+
+                <h4>
+
+                    {{ leader.title }}
+
+                </h4>
+
+                <p class="leader-message">
+
+                    {{ leader.message }}
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="leader-biography">
+
+    <div class="container">
+
+        <h2>
+            Biographie
+        </h2>
+
+        <div>
+
+            {{ leader.biography|linebreaks }}
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="leader-vision">
+
+    <div class="container">
+
+        <h2>
+            Notre Vision
+        </h2>
+
+        <div>
+
+            {{ leader.vision|linebreaks }}
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
