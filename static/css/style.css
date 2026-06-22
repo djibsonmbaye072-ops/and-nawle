@@ -3403,89 +3403,290 @@ ULTIMATE PREMIUM ADDON
 }
 
 /* ==================================================
-   PRESIDENT PREMIUM
+PRESIDENT PAGE GOD TIER 2026
+================================================== */
+
+:root{
+
+    --primary:#0d6efd;
+    --primary-dark:#2563eb;
+    --secondary:#00d4ff;
+    --success:#00ff88;
+
+    --dark:#0f172a;
+    --text:#475569;
+
+    --white:#ffffff;
+
+    --shadow-sm:0 10px 30px rgba(15,23,42,.08);
+    --shadow-md:0 20px 60px rgba(15,23,42,.12);
+    --shadow-lg:0 30px 90px rgba(15,23,42,.15);
+
+}
+
+/* ==================================================
+SECTION HERO
 ================================================== */
 
 .leader-section{
 
+    position:relative;
+
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    overflow:hidden;
+
     padding:120px 0;
 
     background:
-    linear-gradient(
-        135deg,
-        #0037A0,
-        #0057D8
-    );
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f8fbff 40%,
+            #eef5ff 100%
+        );
 
-    color:white;
+}
+
+/* ==================================================
+AURORA BACKGROUND
+================================================== */
+
+.aurora-bg{
+
+    position:absolute;
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.aurora-bg::before,
+.aurora-bg::after{
+
+    content:'';
+
+    position:absolute;
+
+    width:850px;
+    height:850px;
+
+    border-radius:50%;
+
+    filter:blur(140px);
+
+    opacity:.20;
+
+}
+
+.aurora-bg::before{
+
+    background:#00d4ff;
+
+    top:-250px;
+    left:-250px;
+
+    animation:auroraMove 20s linear infinite;
+
+}
+
+.aurora-bg::after{
+
+    background:#00ff88;
+
+    bottom:-250px;
+    right:-250px;
+
+    animation:auroraMoveReverse 25s linear infinite;
+
+}
+
+/* ==================================================
+FLOATING PARTICLES
+================================================== */
+
+.floating-particles{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.floating-particles span{
+
+    position:absolute;
+
+    bottom:-100px;
+
+    width:10px;
+    height:10px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.8);
+
+    animation:particleFloat 12s linear infinite;
+
+}
+
+.floating-particles span:nth-child(1){
+    left:10%;
+    animation-delay:0s;
+}
+
+.floating-particles span:nth-child(2){
+    left:25%;
+    animation-delay:2s;
+}
+
+.floating-particles span:nth-child(3){
+    left:40%;
+    animation-delay:4s;
+}
+
+.floating-particles span:nth-child(4){
+    left:60%;
+    animation-delay:6s;
+}
+
+.floating-particles span:nth-child(5){
+    left:80%;
+    animation-delay:8s;
+}
+
+.floating-particles span:nth-child(6){
+    left:92%;
+    animation-delay:10s;
+}
+
+/* ==================================================
+BACKGROUND SHAPES
+================================================== */
+
+.leader-bg-shape{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(100px);
+
+    opacity:.15;
+
+}
+
+.shape-1{
+
+    width:350px;
+    height:350px;
+
+    background:#0d6efd;
+
+    top:-100px;
+    right:-100px;
+
+    animation:floatShape 12s ease-in-out infinite;
+
+}
+
+.shape-2{
+
+    width:320px;
+    height:320px;
+
+    background:#00ff88;
+
+    bottom:-120px;
+    left:-100px;
+
+    animation:floatShape 15s ease-in-out infinite;
+
+}
+
+/* ==================================================
+PHOTO PRESIDENT
+================================================== */
+
+.leader-photo-wrapper{
+
+    position:relative;
+
+    max-width:480px;
+
+    margin:auto;
+
+    perspective:1800px;
+
+}
+
+.photo-glow{
+
+    position:absolute;
+
+    inset:-20px;
+
+    border-radius:40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d6efd,
+            #00d4ff,
+            #00ff88
+        );
+
+    filter:blur(40px);
+
+    opacity:.35;
+
 }
 
 .leader-photo{
 
     width:100%;
 
-    border-radius:30px;
+    position:relative;
+
+    z-index:2;
+
+    border-radius:35px;
+
+    border:8px solid rgba(255,255,255,.75);
+
+    backdrop-filter:blur(10px);
+
+    box-shadow:var(--shadow-lg);
+
+    animation:
+        floatPhoto 6s ease-in-out infinite;
+
+    transition:
+        transform .8s ease,
+        box-shadow .8s ease;
+
+}
+
+.leader-photo:hover{
+
+    transform:
+        rotateY(-8deg)
+        rotateX(4deg)
+        scale(1.04);
 
     box-shadow:
-    0 30px 60px rgba(0,0,0,.25);
+        0 40px 100px rgba(13,110,253,.25);
+
 }
-
-.leader-badge{
-
-    display:inline-block;
-
-    background:white;
-
-    color:#0037A0;
-
-    padding:10px 20px;
-
-    border-radius:50px;
-
-    font-weight:700;
-
-    margin-bottom:20px;
-}
-
-.leader-section h1{
-
-    font-size:3rem;
-
-    font-weight:900;
-
-    margin-bottom:15px;
-}
-
-.leader-section h4{
-
-    opacity:.9;
-
-    margin-bottom:30px;
-}
-
-.leader-message{
-
-    font-size:1.2rem;
-
-    line-height:2;
-}
-
-.leader-biography,
-.leader-vision{
-
-    padding:100px 0;
-}
-
-.leader-biography h2,
-.leader-vision h2{
-
-    font-weight:900;
-
-    margin-bottom:30px;
-
-    color:#0037A0;
-}
-
 /* ==================================================
    STATISTIQUES NATIONALES
 ================================================== */
@@ -3646,4 +3847,4 @@ RESPONSIVE
 
         display:none;
     }
-}}
+}
